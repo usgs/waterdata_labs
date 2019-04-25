@@ -7,7 +7,7 @@ RUN apt-get install -y \
     gnupg 
 
 # Install Hugo from tar distribution to /usr/local/bin
-RUN curl --silent --location https://github.com/gohugoio/hugo/releases/download/v0.55.3/hugo_0.55.3_Linux-64bit.tar.gz > hugo.tar.gz
+RUN curl --silent --location https://github.com/gohugoio/hugo/releases/download/v0.54.0/hugo_0.54.0_Linux-64bit.tar.gz > hugo.tar.gz
 RUN tar xzf hugo.tar.gz -C /usr/local/bin
 
 

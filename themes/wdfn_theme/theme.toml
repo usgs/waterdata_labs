@@ -1,0 +1,4 @@
+tags = ["blog"]
+features = ["blog"]
+min_version = 0.15
+theme = "Water Data For The Nation"
