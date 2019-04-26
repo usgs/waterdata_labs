@@ -4,15 +4,17 @@ RUN apt-get update
 RUN apt-get install -y \
     build-essential \
     curl \
-    gnupg 
+    gnupg
 
 # Install Hugo from tar distribution to /usr/local/bin
-RUN curl --silent --location https://github.com/gohugoio/hugo/releases/download/v0.54.0/hugo_0.54.0_Linux-64bit.tar.gz > hugo.tar.gz
+ARG HUGO_VERSION="0.55.4"
+RUN curl --silent --location https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz > hugo.tar.gz
 RUN tar xzf hugo.tar.gz -C /usr/local/bin
 
 
 # Install node.js 8.x (LTS at time of writing) from official package.
-RUN curl --silent --location https://deb.nodesource.com/setup_8.x | bash -
+ARG NODE_VERSION='12.x'
+RUN curl --silent --location https://deb.nodesource.com/setup_${NODE_VERSION} | bash -
 RUN apt-get -y update
 RUN apt-get install -y nodejs
 
@@ -25,5 +27,4 @@ ENV HUGO_BASEURL ${BUILD_COMMAND}
 # The entrypoint script supports commands "build", "server", or pass-through to sh.
 ENTRYPOINT ["/src/entrypoint.sh"]
 
-# Default operation
 CMD ["build"]

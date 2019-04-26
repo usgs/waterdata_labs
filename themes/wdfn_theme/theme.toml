@@ -1,4 +1,4 @@
-tags = ["blog"]
-features = ["blog"]
+tags = ["labs.waterdata"]
+features = ["labs.waterdata"]
 min_version = 0.15
 theme = "Water Data For The Nation"
