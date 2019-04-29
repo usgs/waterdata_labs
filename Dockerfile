@@ -32,4 +32,4 @@ CMD ["build"]
 
 COPY . /public
 
-RUN aws s3 sync public --delete s3://labs.waterdata.usgs.gov
+RUN aws s3 sync public/ --delete s3://labs.waterdata.usgs.gov
