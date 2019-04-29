@@ -13,7 +13,7 @@ RUN curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.
 RUN unzip awscli-bundle.zip
 RUN ./awscli-bundle/install -b ~/bin/aws
 #RUN echo $PATH}| grep ~/bin
-RUN export PATH=~/bin:$PATH
+RUN ENV PATH "~/bin:${PATH}"
 
 # Install Hugo from tar distribution to /usr/local/bin
 ARG HUGO_VERSION="0.55.4"
