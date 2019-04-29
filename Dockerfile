@@ -31,7 +31,7 @@ ENTRYPOINT ["/src/entrypoint.sh"]
 
 CMD ["build"]
 
-RUN rm -r . /public
+RUN rm -r . /public/public
 
 COPY . /public
 
