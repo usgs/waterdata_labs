@@ -6,7 +6,7 @@ RUN apt-get install -y \
     curl \
     gnupg
 
-RUN apt-get unzip
+RUN bash - apt-get unzip
 
 # Install AWS CLI
 RUN curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
