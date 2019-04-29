@@ -9,11 +9,13 @@ RUN apt-get install -y \
 RUN apt-get install unzip
 
 # Install AWS CLI
-RUN curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
-RUN unzip awscli-bundle.zip
-RUN ./awscli-bundle/install -b ~/bin/aws
-#RUN echo $PATH}| grep ~/bin
-RUN export PATH="~/bin:${PATH}"
+#RUN curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+#RUN unzip awscli-bundle.zip
+#RUN ./awscli-bundle/install -b ~/bin/aws
+##RUN echo $PATH}| grep ~/bin
+#RUN export PATH="~/bin:${PATH}"
+
+RUN pip install awscli
 
 # Install Hugo from tar distribution to /usr/local/bin
 ARG HUGO_VERSION="0.55.4"
