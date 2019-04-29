@@ -42,4 +42,4 @@ CMD ["build"]
 COPY . /public
 
 #aws s3 cp anddi.jar s3://owi-common-resources/resources/application/anddi/artifacts/${TIER}/anddi.jar
-RUN aws s3 sync ./public/ s3://labs.waterdata.usgs.gov
+RUN aws s3 sync /public/ s3://labs.waterdata.usgs.gov
