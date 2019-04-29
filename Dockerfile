@@ -6,6 +6,7 @@ RUN apt-get install -y \
     curl \
     gnupg
 
+# Install Amazon Web Services Commmand Line Interface tool (awscli)
 RUN pip install awscli
 
 # Install Hugo from tar distribution to /usr/local/bin
@@ -22,6 +23,8 @@ RUN apt-get install -y nodejs
 COPY . /src
 WORKDIR /src
 
+RUN rm -rv /public
+
 ARG HUGO_BASEURL="http://labs.waterdata.usgs.gov"
 ENV HUGO_BASEURL ${BUILD_COMMAND}
 
@@ -32,4 +35,4 @@ CMD ["build"]
 
 COPY . /public
 
-RUN aws s3 sync /public/public s3://labs.waterdata.usgs.gov --delete 
+RUN aws s3 sync /public/public s3://labs.waterdata.usgs.gov --delete
