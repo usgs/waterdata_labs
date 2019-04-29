@@ -12,7 +12,9 @@ RUN apt-get install unzip
 RUN curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 RUN unzip awscli-bundle.zip
 RUN ./awscli-bundle/install -b ~/bin/aws
-RUN aws --version
+RUN pwd
+RUN ls -a
+
 # Install Hugo from tar distribution to /usr/local/bin
 ARG HUGO_VERSION="0.55.4"
 RUN curl --silent --location https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz > hugo.tar.gz
