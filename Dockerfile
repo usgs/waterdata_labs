@@ -23,7 +23,7 @@ RUN apt-get install -y nodejs
 COPY . /src
 WORKDIR /src
 
-RUN rm -rv /public
+
 
 ARG HUGO_BASEURL="http://labs.waterdata.usgs.gov"
 ENV HUGO_BASEURL ${BUILD_COMMAND}
@@ -34,5 +34,7 @@ ENTRYPOINT ["/src/entrypoint.sh"]
 CMD ["build"]
 
 COPY . /public
+
+RUN ls -a /public
 
 RUN aws s3 sync /public/public s3://labs.waterdata.usgs.gov --delete
