@@ -13,7 +13,6 @@ keywords:
 image: /static/graph-images/api_graph_image.png
 ---
 
-
 One of the most common pieces of feedback that we received about the hydrograph on the new monitoring location pages was that users wanted a way to save an image of a given hydrograph.  In the classic pages, these graphs are already images, and it was easy enough to expose the endpoint that generated those images:
 
 https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=09380000&parm_cd=00060&period=7

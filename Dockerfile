@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM usgswma/python:debian-slim-stretch-python-3.6-24e21a7a7fc0ecea73ebfd36da71c320c3fb803d
 
 RUN apt-get update
 RUN apt-get install -y \
@@ -6,15 +6,22 @@ RUN apt-get install -y \
     curl \
     gnupg
 
+RUN pwd
+
+# Install AWS CLI
+RUN curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+RUN unzip awscli-bundle.zip
+RUN ./awscli-bundle/install -b ~/bin/aws
+
+
 # Install Hugo from tar distribution to /usr/local/bin
 ARG HUGO_VERSION="0.55.4"
 RUN curl --silent --location https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz > hugo.tar.gz
 RUN tar xzf hugo.tar.gz -C /usr/local/bin
 
 
-# Install node.js 8.x (LTS at time of writing) from official package.
-ARG NODE_VERSION='12.x'
-RUN curl --silent --location https://deb.nodesource.com/setup_${NODE_VERSION} | bash -
+# Install node.js from official package.
+RUN curl --silent --location https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get -y update
 RUN apt-get install -y nodejs
 
@@ -28,3 +35,8 @@ ENV HUGO_BASEURL ${BUILD_COMMAND}
 ENTRYPOINT ["/src/entrypoint.sh"]
 
 CMD ["build"]
+
+COPY . /public
+
+#aws s3 cp anddi.jar s3://owi-common-resources/resources/application/anddi/artifacts/${TIER}/anddi.jar
+RUN aws s3 sync ./public/ s3://labs.waterdata.usgs.gov
