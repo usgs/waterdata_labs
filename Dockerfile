@@ -12,8 +12,7 @@ RUN apt-get install unzip
 RUN curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 RUN unzip awscli-bundle.zip
 RUN ./awscli-bundle/install -b ~/bin/aws
-
-
+RUN aws --version
 # Install Hugo from tar distribution to /usr/local/bin
 ARG HUGO_VERSION="0.55.4"
 RUN curl --silent --location https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz > hugo.tar.gz
@@ -39,4 +38,4 @@ CMD ["build"]
 COPY . /public
 
 #aws s3 cp anddi.jar s3://owi-common-resources/resources/application/anddi/artifacts/${TIER}/anddi.jar
-RUN awscli s3 sync ./public/ s3://labs.waterdata.usgs.gov
+RUN aws s3 sync ./public/ s3://labs.waterdata.usgs.gov
