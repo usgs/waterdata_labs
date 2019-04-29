@@ -6,15 +6,6 @@ RUN apt-get install -y \
     curl \
     gnupg
 
-RUN apt-get install unzip
-
-# Install AWS CLI
-#RUN curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
-#RUN unzip awscli-bundle.zip
-#RUN ./awscli-bundle/install -b ~/bin/aws
-##RUN echo $PATH}| grep ~/bin
-#RUN export PATH="~/bin:${PATH}"
-
 RUN pip install awscli
 
 # Install Hugo from tar distribution to /usr/local/bin
@@ -31,7 +22,7 @@ RUN apt-get install -y nodejs
 COPY . /src
 WORKDIR /src
 
-ARG HUGO_BASEURL="http://localhost:1313"
+ARG HUGO_BASEURL="http://labs.waterdata.usgs.gov"
 ENV HUGO_BASEURL ${BUILD_COMMAND}
 
 # The entrypoint script supports commands "build", "server", or pass-through to sh.
@@ -41,5 +32,4 @@ CMD ["build"]
 
 COPY . /public
 
-#aws s3 cp anddi.jar s3://owi-common-resources/resources/application/anddi/artifacts/${TIER}/anddi.jar
-RUN aws s3 sync /public/ s3://labs.waterdata.usgs.gov
+RUN aws s3 sync public --delete s3://labs.waterdata.usgs.gov
