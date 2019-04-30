@@ -29,7 +29,7 @@ ARG BLAH
 RUN echo $BLAH
 
 # The entrypoint script supports commands "build", "server", or pass-through to sh.
-ENTRYPOINT ["/src/entrypoint.sh"]
+ENTRYPOINT ["/src/entrypoint.sh ${BLAH}"]
 
 CMD ["build"]
 
