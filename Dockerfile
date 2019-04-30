@@ -24,6 +24,7 @@ COPY . /src
 WORKDIR /src
 
 RUN ls -a
+RUN echo "does echo work?"
 RUN echo ${DEPLOY_TIER}
 
 ARG HUGO_BASEURL="http://labs.waterdata.usgs.gov"
