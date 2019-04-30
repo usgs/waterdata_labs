@@ -5,7 +5,8 @@ set -eux -o pipefail
 COMMAND=$1
 ARGS=${@:2}
 
-echo ARGS
+echo "$@"
+echo "Charmander"
 
 case ${COMMAND} in
     build)
