@@ -23,12 +23,10 @@ RUN apt-get install -y nodejs
 COPY . /src
 WORKDIR /src
 
-RUN ls -a
-RUN echo "does echo work?"
-RUN echo ${DEPLOY_TIER}
-
 ARG HUGO_BASEURL="http://labs.waterdata.usgs.gov"
 ENV HUGO_BASEURL ${BUILD_COMMAND}
+ARG BLAH
+
 
 # The entrypoint script supports commands "build", "server", or pass-through to sh.
 ENTRYPOINT ["/src/entrypoint.sh"]

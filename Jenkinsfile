@@ -11,7 +11,7 @@ pipeline {
     stage('Build') {
       agent {
         dockerfile {
-          args '-u root:root -v "${WORKSPACE}":/src -e "HUGO_BASEURL=/labs.waterdata"'
+          args '-build-arg BLAH=PIKACHU -u root:root -v "${WORKSPACE}":/src -e "HUGO_BASEURL=/labs.waterdata"'
           reuseNode true
         }
       }
