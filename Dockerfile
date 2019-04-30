@@ -14,7 +14,7 @@ ARG HUGO_VERSION="0.55.4"
 RUN curl --silent --location https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz > hugo.tar.gz
 RUN tar xzf hugo.tar.gz -C /usr/local/bin
 
-
+RUN echo
 # Install node.js from official package.
 RUN curl --silent --location https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get -y update
@@ -23,6 +23,9 @@ RUN apt-get install -y nodejs
 COPY . /src
 WORKDIR /src
 
+RUN ls -a
+RUN echo ${DEPLOY_TIER}
+
 ARG HUGO_BASEURL="http://labs.waterdata.usgs.gov"
 ENV HUGO_BASEURL ${BUILD_COMMAND}
 
@@ -30,8 +33,6 @@ ENV HUGO_BASEURL ${BUILD_COMMAND}
 ENTRYPOINT ["/src/entrypoint.sh"]
 
 CMD ["build"]
-
-RUN rm -r . /public/public
 
 COPY . /public
 
