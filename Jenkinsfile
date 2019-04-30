@@ -1,5 +1,8 @@
 pipeline {
+
+script {
 println "in jenkins file"
+}
   agent {
     node {
       label 'project:any'
