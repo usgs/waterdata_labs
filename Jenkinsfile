@@ -1,4 +1,5 @@
 pipeline {
+println "in jenkins file"
   agent {
     node {
       label 'project:any'
@@ -11,7 +12,7 @@ pipeline {
     stage('Build') {
       agent {
         dockerfile {
-          args '-u root:root -v "${WORKSPACE}":/src -e "HUGO_BASEURL=/labs.waterdata"'
+          args '-u root:root -v "${WORKSPACE}":/src -e "HUGO_BASEURL=/labs.waterdata.usgs.gov" '
           reuseNode true
         }
       }
