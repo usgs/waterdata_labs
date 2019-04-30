@@ -5,8 +5,6 @@ set -eux -o pipefail
 COMMAND=$1
 ARGS=${@:2}
 
-echo "$@" > /blah.txt
-
 case ${COMMAND} in
     build)
         cd /src/themes/wdfn_theme

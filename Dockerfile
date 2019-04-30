@@ -24,9 +24,11 @@ COPY . /src
 WORKDIR /src
 
 ARG HUGO_BASEURL="http://labs.waterdata.usgs.gov"
+#ENV HUGO_BASEURL ${BUILD_COMMAND}
 ENV HUGO_BASEURL ${BUILD_COMMAND}
 #ARG BLAH
-#RUN echo ${BLAH} > /text.txt
+#RUN echo ${HUGO_BASEURL} > /texturl.txt
+#RUN echo ${BUILD_COMMAND} > /text.txt
 
 # The entrypoint script supports commands "build", "server", or pass-through to sh.
 ENTRYPOINT ["/src/entrypoint.sh"]
