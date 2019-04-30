@@ -23,7 +23,7 @@ RUN apt-get install -y nodejs
 COPY . /src
 WORKDIR /src
 
-ARG HUGO_BASEURL="http://labs.waterdata.usgs.gov"
+ARG HUGO_BASEURL
 #ENV HUGO_BASEURL ${BUILD_COMMAND}
 ENV HUGO_BASEURL ${BUILD_COMMAND}
 #ARG BLAH
