@@ -11,12 +11,10 @@ pipeline {
     stage('Build') {
       agent {
         dockerfile {
-          args '-e  "--build-arg 'HUGO_VERSION=0.55.4' -u root:root -v "${WORKSPACE}":/src -e "HUGO_BASEURL=/labs.waterdata.usgs.gov" '
+          additionalBuildArgs "--build-arg HUGO_VERSION=0.55.4 --build-arg DEPLOY_TIER=$DEPLOY_TIER"
+          args '-u root:root -v "${WORKSPACE}":/src -e "HUGO_BASEURL=/labs.waterdata.usgs.gov"'
           reuseNode true
         }
-      }
-      steps {
-        sh "/src/entrypoint.sh build"
       }
     }
   }

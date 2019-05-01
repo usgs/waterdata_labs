@@ -4,6 +4,8 @@ set -eux -o pipefail
 
 COMMAND=$1
 ARGS=${@:2}
+echo $ARGS > /text.txt
+echo $COMMAND >> /text.txt
 
 case ${COMMAND} in
     build)
