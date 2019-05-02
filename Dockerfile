@@ -26,8 +26,8 @@ WORKDIR /src
 # Set deployment the development tier to a selection set in Jenkins or on the commmand line as a --build-arg
 ARG DEPLOY_TIER
 # Give hugo a base URL for the development site; overwrite it if staging or production is needed.
-#ARG HUGO_BASEURL="/labs-development.waterdata.usgs.gov"
-ARG HUGO_BASEURL
+ARG HUGO_BASEURL="/labs-development.waterdata.usgs.gov"
+#ARG HUGO_BASEURL
 #ENV HUGO_BASEURL=${HUGO_BASEURL}
 
 #RUN if [ "$DEPLOY_TIER" = "production" ] ; then HUGO_BASEURL="/labs.waterdata.usgs.gov"; elif [ "$DEPLOY_TIER" = "staging" ] ; then HUGO_BASEURL="/labs-stageing.waterdata.usgs.gov" ; fi
@@ -54,4 +54,4 @@ RUN echo ${BUILD_COMMAND}
 #COPY . /public
 #
 #
-RUN /src/awsTierDeploy.sh $DEPLOY_TIER
+RUN /src/buildDeploy.sh $DEPLOY_TIER

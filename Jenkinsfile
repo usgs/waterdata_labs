@@ -6,7 +6,7 @@ pipeline {
   }
   parameters {
     choice(choices: ['development', 'staging', 'production'], description: 'deployment environment', name: 'DEPLOY_TIER')
-  }
+    }
   stages {
     stage('Build') {
       agent {
