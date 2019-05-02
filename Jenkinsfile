@@ -17,7 +17,7 @@ pipeline {
         }
       }
       steps {
-        
+        sh "/src/buildDeploy.sh $DEPLOY_TIER"
       }
     }
   }
