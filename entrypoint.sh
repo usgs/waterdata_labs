@@ -22,6 +22,5 @@ case ${COMMAND} in
 
         ;;
 esac
-pwd
-ls -al
+
 ls -al public/
