@@ -1,6 +1,8 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 DEPLOY_TIER=$1
+echo "in deploy script"
+echo $DEPLOY_TIER
 
 if [[ $DEPLOY_TIER == 'production' ]]
     then
@@ -9,7 +11,7 @@ if [[ $DEPLOY_TIER == 'production' ]]
 elif [[ $DEPLOY_TIER == 'staging' ]]
     then
     echo "deploy to staging" > textStaging.txt
-#    aws s3 sync /public/public s3://labs-staging.waterdata.usgs.gov --delete
+    aws s3 sync /public/public s3://labs-staging.waterdata.usgs.gov --delete
 else
     echo "deploy to development" > textDev.txt
 #    aws s3 sync /public/public s3://labs-development.waterdata.usgs.gov --delete
