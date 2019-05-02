@@ -22,5 +22,3 @@ case ${COMMAND} in
 
         ;;
 esac
-
-ls -al public/

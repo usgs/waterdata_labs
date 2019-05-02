@@ -17,7 +17,7 @@ pipeline {
         }
       }
       steps {
-        sh "/src/entrypoint.sh build"
+        
       }
     }
   }
