@@ -4,7 +4,7 @@ set -eux -o pipefail
 
 COMMAND=$1
 ARGS=${@:2}
-
+echo ${COMMAND}
 case ${COMMAND} in
     build)
         cd /src/themes/wdfn_theme
