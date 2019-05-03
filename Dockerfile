@@ -34,4 +34,4 @@ ARG HUGO_COMMAND="build"
 
 COPY . /public
 
-ENTRYPOINT "/src/buildDeploy.sh ${HUGO_COMMAND} ${DEPLOY_TIER}"
+ENTRYPOINT /src/buildDeploy.sh $HUGO_COMMAND $DEPLOY_TIER
