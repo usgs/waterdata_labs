@@ -23,9 +23,6 @@ COPY . /src
 WORKDIR /src
 
 COPY . /public
-ARG HUGO_COMMAND="build"
-ARG DEPLOY_TIER="development"
-ARG AWS_SYNC="sync_no"
 
 COPY buildDeploy.sh /
 COPY entrypoint.sh /
