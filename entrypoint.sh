@@ -5,8 +5,6 @@ set -eux -o pipefail
 HUGO_COMMAND=$1
 ARGS=${@:2}
 
-echo 'this is args in entrypoint ' ${ARGS}
-
 case ${HUGO_COMMAND} in
     build)
         cd /src/themes/wdfn_theme

@@ -8,7 +8,6 @@ echo "in buildDeploy"
 echo ${HUGO_COMMAND}
 echo ${DEPLOY_TIER}
 
-
 if [[ $DEPLOY_TIER == 'production' ]]
     then
     echo 'deploy to production ran'
