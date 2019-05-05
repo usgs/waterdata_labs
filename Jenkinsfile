@@ -11,13 +11,13 @@ pipeline {
     stage('Build') {
       agent {
         dockerfile {
-          additionalBuildArgs "--build-arg DEPLOY_TIER=$DEPLOY_TIER"
+          additionalBuildArgs "--build-arg build --build-arg DEPLOY_TIER=$DEPLOY_TIER --build-arg sync_yes"
           args '-u root:root -v "${WORKSPACE}":/src '
           reuseNode true
         }
       }
       steps {
-        sh "/src/buildDeploy.sh $DEPLOY_TIER"
+        echo 'build complete'
       }
     }
   }

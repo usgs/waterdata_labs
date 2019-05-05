@@ -2,10 +2,12 @@
 
 set -eux -o pipefail
 
-COMMAND=$1
+HUGO_COMMAND=$1
 ARGS=${@:2}
 
-case ${COMMAND} in
+echo 'this is args in entrypoint ' ${ARGS}
+
+case ${HUGO_COMMAND} in
     build)
         cd /src/themes/wdfn_theme
         npm install
