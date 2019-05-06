@@ -32,8 +32,5 @@ ENV ENV_AWS_SYNC=$AWS_SYNC
 
 COPY . /public
 
-COPY buildDeploy.sh /
-COPY entrypoint.sh /
-COPY awsTierDeploy.sh /
-ENTRYPOINT /buildDeploy.sh ${ENV_HUGO_COMMAND} ${ENV_DEPLOY_TIER} ${ENV_AWS_SYNC}
+ENTRYPOINT /src/buildDeploy.sh ${ENV_HUGO_COMMAND} ${ENV_DEPLOY_TIER} ${ENV_AWS_SYNC}
 #CMD ["sh", "-c", "$HUGO_COMMAND $DEPLOY_TIER $AWS_SYNC" ]
