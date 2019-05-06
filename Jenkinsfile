@@ -11,7 +11,7 @@ pipeline {
     stage('Build') {
       agent {
         dockerfile {
-          additionalBuildArgs "build $DEPLOY_TIER sync_yes"
+          additionalBuildArgs "--build-arg  HUGO_COMMAND=build $DEPLOY_TIER sync_yes"
           args '-u root:root -v "${WORKSPACE}":/src '
           reuseNode true
         }
