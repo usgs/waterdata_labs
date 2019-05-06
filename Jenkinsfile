@@ -18,7 +18,7 @@ pipeline {
       }
       steps {
         echo 'build complete'
-        docker log 
+        sh "docker logs ${h.id}"
       }
     }
   }
