@@ -18,6 +18,7 @@ pipeline {
       }
       steps {
         echo 'build complete'
+        docker log 
       }
     }
   }
