@@ -4,21 +4,29 @@ HUGO_COMMAND=$1
 DEPLOY_TIER=$2
 S3_SYNC=$3
 
-echo "in buildDeploy"
-echo ${HUGO_COMMAND}
-echo ${DEPLOY_TIER}
+echo "in buildDeploy.sh"
+echo 'this is the value of HUGO_COMMAND:' ${HUGO_COMMAND}
+echo 'this is the value of DEPLOY_TIER:' ${DEPLOY_TIER}
+echo 'this is the value of S3_SYNC:' ${S3_SYNC}
 
 if [[ $DEPLOY_TIER == 'production' ]]
     then
-    echo 'deploy to production ran'
     base_url=labs.waterdata.usgs.gov
+    echo "Deploy to production ran.The base URL is" ${base_url}
+
 elif [[ $DEPLOY_TIER == 'staging' ]]
     then
-    echo 'deploy to staging ran'
     base_url=labs-staging.waterdata.usgs.gov
-else
-    echo 'deploy to development ran'
+    echo "Deploy to staging ran.The base URL is" ${base_url}
+
+elif [[ $DEPLOY_TIER == 'development' ]]
+    then
     base_url=labs-development.waterdata.usgs.gov
+    echo "Deploy to development ran.The base URL is" ${base_url}
+
+else
+    base_url=labs-development.waterdata.usgs.gov
+    echo "No valid deployment tier was submitted to application. Deployment tier of 'development' will be assumed. The base URL is" ${base_url}
 fi
 
 /bin/bash entrypoint.sh $HUGO_COMMAND
