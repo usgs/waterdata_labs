@@ -12,13 +12,13 @@ pipeline {
       agent {
         dockerfile {
           additionalBuildArgs "--build-arg HUGO_COMMAND=build --build-arg DEPLOY_TIER=$DEPLOY_TIER --build-arg AWS_SYNC=sync_yes"
-          args '-u root:root -v "${WORKSPACE}":/src '
+          args '-u root:root -v "${WORKSPACE}":/src -t test'
           reuseNode true
         }
       }
       steps {
         echo 'build complete'
-        sh "docker logs ${h.id}"
+        sh 'docker run test'
       }
     }
   }
