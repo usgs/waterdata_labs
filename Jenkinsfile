@@ -18,7 +18,6 @@ pipeline {
       }
       steps {
         echo 'build complete'
-        sh "docker run ${h.id}"
       }
     }
   }
