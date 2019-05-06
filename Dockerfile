@@ -32,4 +32,4 @@ COPY buildDeploy.sh /
 COPY entrypoint.sh /
 COPY awsTierDeploy.sh /
 ENTRYPOINT ["/buildDeploy.sh"]
-CMD ["$HUGO_COMMAND development sync_no" ]
+CMD ["$HUGO_COMMAND $DEPLOY_TIER $AWS_SYNC" ]
