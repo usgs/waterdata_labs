@@ -31,5 +31,5 @@ fi
 
 /bin/bash entrypoint.sh $HUGO_COMMAND
 if [[ $S3_SYNC == 'sync_yes' ]]
-    then /bin/bash awsTierDeploy.sh ${base_url}
+    then /bin/bash awsTierDeploy.sh $base_url
 fi
