@@ -31,5 +31,5 @@ COPY . /public
 COPY buildDeploy.sh /
 COPY entrypoint.sh /
 COPY awsTierDeploy.sh /
-ENTRYPOINT ["/buildDeploy.sh"]
-CMD ["$HUGO_COMMAND $DEPLOY_TIER $AWS_SYNC" ]
+ENTRYPOINT [ "/buildDeploy.sh $HUGO_COMMAND $DEPLOY_TIER $AWS_SYNC" ]
+#CMD ["sh", "-c", "$HUGO_COMMAND $DEPLOY_TIER $AWS_SYNC" ]
