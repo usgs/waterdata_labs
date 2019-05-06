@@ -6,4 +6,4 @@ URL=$1
 
 echo "testing" > testing.txt
 
-aws s3 sync testing.txt s3://${URL} --delete
+#aws s3 sync testing.txt s3://${URL} --delete
