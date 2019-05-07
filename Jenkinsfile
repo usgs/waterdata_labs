@@ -18,6 +18,7 @@ pipeline {
       }
       steps {
         echo 'build complete'
+        sh "/src/buildDeploy.sh build ${DEPLOY_TIER} sync_yes"
       }
     }
   }
