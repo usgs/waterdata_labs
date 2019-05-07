@@ -10,7 +10,7 @@ labs.waterdata.usgs.gov is where the development team that is putting together t
 
 # Build and develop with Docker
 
-A Dockerfile and Docker Compose configuration is provided that is capable of running a development server and building the deployable static site.
+A Dockerfile and Docker Compose configuration is provided that is capable of running a development server and building the deploy static site which may deployed to Amazon Web Services through a job on a Jenkins job runner.
 
 ## Local development
 
