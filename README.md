@@ -31,12 +31,6 @@ Using `docker-compose`, the site may be built using the `build` command provided
 docker-compose run hugo build
 ```
 
-The base URL is specified with the `HUGO_BASEURL` environment variable:
-
-```bash
-docker-compose run -e HUGO_BASEURL=http://labs.waterdata.usgs.gov/ hugo build
-```
-
 Additional arguments may be passed to the [**Hugo**](https://gohugo.io/) binary as the last argument:
 
 ```bash
