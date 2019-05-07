@@ -29,7 +29,7 @@ else
     echo "No valid deployment tier was submitted to application. Deployment tier of 'development' will be assumed. The base URL is" ${base_url}
 fi
 
-/bin/bash entrypoint.sh $HUGO_COMMAND
+/bin/bash hugoCommand.sh $HUGO_COMMAND
 if [[ $S3_SYNC == 'sync_yes' ]]
     then /bin/bash awsTierDeploy.sh $base_url
 fi
