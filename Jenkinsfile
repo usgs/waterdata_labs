@@ -17,7 +17,7 @@ pipeline {
         }
       }
       steps {
-        echo 'build complete'
+        echo 'Docker image build complete, preparing to run image/container/hugo'
         sh "/src/buildDeploy.sh build ${DEPLOY_TIER} sync_yes"
       }
     }

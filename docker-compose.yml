@@ -2,8 +2,6 @@ version: "3"
 
 services:
   hugo:
-#    environment:
-#      - ENV_HUGO_COMMAND=server
     build: .
     command: server --buildDrafts
     ports:
