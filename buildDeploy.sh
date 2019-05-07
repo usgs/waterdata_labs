@@ -1,8 +1,12 @@
 #!/bin/bash
 
+
 HUGO_COMMAND=$1
 DEPLOY_TIER=$2
 S3_SYNC=$3
+DEPLOY_TIER="${DEPLOY_TIER:-default value}"
+
+S3_SYNC=$"{S3_SYNC:-sync_no}"
 
 echo "Currently in buildDeploy.sh"
 echo 'The value of HUGO_COMMAND:' ${HUGO_COMMAND}
