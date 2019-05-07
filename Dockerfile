@@ -27,16 +27,16 @@ WORKDIR /src
 # Set the values as Docker build arguments 'ARG's
 # Set these to the most commonly needed values.
 # These values can be overwritten on the command line or by a Jenkins job.
-ARG HUGO_COMMAND="build"
-ARG DEPLOY_TIER="development"
-ARG AWS_SYNC="sync_no"
+#ARG HUGO_COMMAND="build"
+#ARG DEPLOY_TIER="development"
+#ARG AWS_SYNC="sync_no"
 
 # The ARGs are only availble during the building of the Docker image and are not saved to the image
 # We need these values in the image so the Jenkins job can use them.
 # So, save the ARGs as 'ENV' variables that are accessable in the container.
-ENV ENV_HUGO_COMMAND=$HUGO_COMMAND
-ENV ENV_DEPLOY_TIER=$DEPLOY_TIER
-ENV ENV_AWS_SYNC=$AWS_SYNC
+#ENV ENV_HUGO_COMMAND=$HUGO_COMMAND
+#ENV ENV_DEPLOY_TIER=$DEPLOY_TIER
+#ENV ENV_AWS_SYNC=$AWS_SYNC
 
 # Tell Docker where to find the scripts that will run Hugo, build the static site, and deploy that site to AWS.
 # Tell Docker to use script as an entrypoint (i.e. run the script) when
