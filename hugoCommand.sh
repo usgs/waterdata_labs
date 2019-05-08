@@ -19,6 +19,6 @@ case ${HUGO_COMMAND} in
         npm run watch & cd /src && hugo server --bind=0.0.0.0 ${ARGS}
         ;;
     *)
-    exec "$@"
+    
         ;;
 esac
