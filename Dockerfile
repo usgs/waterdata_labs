@@ -25,9 +25,8 @@ COPY . /src
 WORKDIR /src
 
 # Tell Docker where to find the scripts that will run Hugo, build the static site, and deploy that site to AWS.
-# Tell Docker to use script as an entrypoint (i.e. run the script) when
+# Tell Docker to use the buildDeploy.sh script as an entrypoint (i.e. run the script) when
 # the Docker image is run to create the Docker container and use 'build' as the default Hugo command.
-
 ENTRYPOINT ["/src/buildDeploy.sh"]
 CMD ["build"]
 
