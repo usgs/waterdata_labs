@@ -29,8 +29,3 @@ WORKDIR /src
 # the Docker image is run to create the Docker container and use 'build' as the default Hugo command.
 ENTRYPOINT ["/src/buildDeploy.sh"]
 CMD ["build"]
-
-
-
-
-

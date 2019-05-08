@@ -42,7 +42,7 @@ fi
 # run the script for the running Hugo
 /bin/bash hugoCommand.sh $HUGO_COMMAND
 
-# Check if the command to deploy to AWS is present, if so call the AWS script to do the deploy
+# Check if the command to deploy to AWS is present. If so, call the AWS script to do the deploy
 if [[ $ARGUMENT_THREE == 'sync_yes' ]]
     then
      /bin/bash awsTierDeploy.sh $base_url
