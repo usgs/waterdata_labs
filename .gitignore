@@ -11,4 +11,5 @@ themes/wdfn_theme/node_modules
 themes/wdfn_theme/static
 *.json-e
 .idea/workspace.xml
+.idea
 
