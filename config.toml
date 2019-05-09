@@ -1,0 +1,7 @@
+canonifyurls = true
+title = "Water Data Labs"
+name = ["Jim Kreft"]
+email = ["jkreft@usgs.gov"]
+preserveTaxonomyNames = true
+paginate = 100
+theme = "wdfn_theme"

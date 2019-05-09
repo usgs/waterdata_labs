@@ -1,0 +1,12 @@
+<article class="grid">
+  <a href="{{ .Permalink }}">
+    <!--<div class="image" style="background-image: url({{ $.Site.BaseURL }}images/{{ with .Params.image }}{{ . }}{{ else }}default.jpg{{ end }});"></div>-->
+    <footer>
+      <time>{{ with .Site.Params.DateForm }}{{ $.Date.Format . }}{{ else }}{{ $.Date.Format "Mon, Jan 2, 2006" }}{{ end }}</time>
+      <div class="author">{{ .Params.author }}</div>
+      <h2 class="title">{{ .Title }}</h2>
+      <div class="image" style="background-image: url({{ $.Site.BaseURL }}{{ with .Params.image }}{{ . }}{{ else }}img/main/USGS-logo-green.png{{ end }});"></div>
+    </footer>
+  </a>
+  <!--div class="summary">{{ .Summary }}</div-->
+</article>

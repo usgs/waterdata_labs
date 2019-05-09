@@ -1,0 +1,6 @@
+{{ define "main" }}
+  <h1 class="p-page-title">{{ .Title }}</h1>
+  <ul>
+    {{ range $key, $value := .Data.Terms }}<li><a href="/{{ $.Data.Plural }}/{{ $key | urlize }}/" class="{{ $.Data.Singular }}">{{ $key }}</a></li>{{ end }}
+  </ul>
+{{ end }}
