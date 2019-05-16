@@ -1,4 +1,13 @@
 {{ define "main" }}
+  <h2>Welcome to the experimental space of Water Data for the Nation!</h2>
+  <p>This is an area where the USGS Internet of Water software development team can try out new things, and users can see what we are working on before it is launched on one of the production sites.  Most of the services, tools and visualiztions that you see here will eventually make to the core waterdata.usgs.gov or waterservices.usgs.gov sites, but some may not. </p>
+  <p>There will be many different things hosted here, but potenial examples include</p>
+  <ul>
+  <li>Web services that do not have a stable API</li>
+  <li>Experimental visualizations and/or dashboards</li>
+  <li>Interesting datasets and data integrations</li>
+  </ul>
+  <p>Please explore and let us know if you have questions!</p>
   <div class="grid-row grid-gap-md">
     {{ range $key, $value := .Paginator.Pages }}
       {{ if ge $value.Date.Unix 100 }}
