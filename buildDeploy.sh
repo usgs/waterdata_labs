@@ -5,7 +5,7 @@
 # The second argument can be a deployment tier from the Jenkinsfile or a Hugo
 # related command, such as '--buildDrafts from the docker-compose file or the command line.'
 # The third argument (if present) will usually indicate whether the build Hugo site should be
-# delivered to and AWS S3 bucket for storage.
+# delivered to an AWS S3 bucket for storage.
 HUGO_COMMAND=$1
 ARGUMENT_TWO=$2
 ARGUMENT_THREE=$3
@@ -23,19 +23,19 @@ else echo 'No third argument was submitted (not necessarily an error).'
 fi
 
 # Check if a 'deploy tier' argument was submitted, if so create a base URL for Hugo to use
-if [[ $ARGUMENT_TWO == 'production' ]]
+if [[ $ARGUMENT_TWO == 'prod' ]]
     then
-    base_url=labs.waterdata.usgs.gov
+    base_url=labs-prod-website
 
-elif [[ $ARGUMENT_TWO == 'staging' ]]
+elif [[ $ARGUMENT_TWO == 'qa' ]]
     then
-    base_url=labs-staging.waterdata.usgs.gov
+    base_url=labs-qa-website
 
-elif [[ $ARGUMENT_TWO == 'development' ]]
+elif [[ $ARGUMENT_TWO == 'test' ]]
     then
-    base_url=labs-development.waterdata.usgs.gov
+    base_url=labs-test-website
 else
-    base_url=labs-development.waterdata.usgs.gov
+    base_url=labs-test-website
     echo "No valid deployment tier was submitted to application (not necessarily an error)."
 fi
 

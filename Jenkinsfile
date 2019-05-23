@@ -5,7 +5,7 @@ pipeline {
     }
   }
   parameters {
-    choice(choices: ['development', 'staging', 'production'], description: 'deployment environment', name: 'DEPLOY_TIER')
+    choice(choices: ['test', 'qa', 'prod'], description: 'desired deployment environment', name: 'DEPLOY_TIER')
   }
   stages {
     stage('Build') {
