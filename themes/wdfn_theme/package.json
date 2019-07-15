@@ -41,7 +41,7 @@
   "homepage": "https://github.com/usgs/wdfn-updates#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.9.0",
-    "wdfn-viz": "^0.1.10"
+    "wdfn-viz": "^1.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
