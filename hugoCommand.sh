@@ -16,6 +16,7 @@ case ${HUGO_COMMAND} in
     server)
         cd /src/themes/wdfn_theme
         npm install
+        npm run build
         npm run watch & cd /src && hugo server --bind=0.0.0.0 ${ARGS}
         ;;
     *)
