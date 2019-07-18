@@ -35,10 +35,10 @@ elif [[ $ARGUMENT_TWO == 'qa' ]]
 
 elif [[ $ARGUMENT_TWO == 'test' ]]
     then
-    base_url=labs-test-website
+    s3_bucket=labs-test-website
     HUGO_BASE_URL=http://labs-test-website.s3-website-us-west-2.amazonaws.com
 else
-    base_url=labs-test-website
+    s3_bucket=labs-test-website
     echo "No valid deployment tier was submitted to application (not necessarily an error)."
 fi
 
