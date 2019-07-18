@@ -40,28 +40,28 @@
   },
   "homepage": "https://github.com/usgs/wdfn-updates#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.8.2",
+    "@fortawesome/fontawesome-free": "^5.9.0",
     "wdfn-viz": "^0.1.10"
   },
   "devDependencies": {
-    "autoprefixer": "^9.5.1",
+    "autoprefixer": "^9.6.1",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
-    "gulp-rev-all": "^1.0.0",
+    "gulp-rev-all": "^2.0.2",
     "jquery": "^3.4.1",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.12.0",
-    "nodemon": "^1.19.0",
+    "nodemon": "^1.19.1",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^6.1.2",
     "postcss-flexbugs-fixes": "^4.1.0",
-    "rollup": "^1.11.3",
-    "rollup-plugin-alias": "^1.5.1",
+    "rollup": "^1.17.0",
+    "rollup-plugin-alias": "^1.5.2",
     "rollup-plugin-buble": "^0.19.6",
-    "rollup-plugin-commonjs": "^9.3.4",
-    "rollup-plugin-node-resolve": "^4.2.3",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-uglify": "^6.0.2",
-    "uglify-js": "^3.5.11"
+    "uglify-js": "^3.6.0"
   }
 }
