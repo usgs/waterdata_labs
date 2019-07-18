@@ -22,7 +22,7 @@ if [[ ! -z "$ARGUMENT_THREE" ]]
 else echo 'No third argument was submitted (not necessarily an error).'
 fi
 
-# Check if a 'deploy tier' argument was submitted, if set the deployment bucket and url for Hugo to use
+# Check if a 'deploy tier' argument was submitted, if so set the deployment bucket and url for Hugo to use
 if [[ $ARGUMENT_TWO == 'prod' ]]
     then
     s3_bucket=labs-prod-website
