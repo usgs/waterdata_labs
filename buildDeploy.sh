@@ -22,20 +22,23 @@ if [[ ! -z "$ARGUMENT_THREE" ]]
 else echo 'No third argument was submitted (not necessarily an error).'
 fi
 
-# Check if a 'deploy tier' argument was submitted, if so create a base URL for Hugo to use
+# Check if a 'deploy tier' argument was submitted, if so set the deployment bucket and url for Hugo to use
 if [[ $ARGUMENT_TWO == 'prod' ]]
     then
-    base_url=labs-prod-website
+    s3_bucket=labs-prod-website
+    HUGO_BASE_URL=https://labs.waterdata.usgs.gov
 
 elif [[ $ARGUMENT_TWO == 'qa' ]]
     then
-    base_url=labs-qa-website
+    s3_bucket=labs-beta-website
+    HUGO_BASE_URL=https://lab-beta.waterdata.usgs.gov
 
 elif [[ $ARGUMENT_TWO == 'test' ]]
     then
-    base_url=labs-test-website
+    s3_bucket=labs-test-website
+    HUGO_BASE_URL=http://labs-test-website.s3-website-us-west-2.amazonaws.com
 else
-    base_url=labs-test-website
+    s3_bucket=labs-test-website
     echo "No valid deployment tier was submitted to application (not necessarily an error)."
 fi
 
@@ -45,7 +48,8 @@ fi
 # Check if the command to deploy to AWS is present. If so, call the AWS script to do the deploy
 if [[ $ARGUMENT_THREE == 'sync_yes' ]]
     then
-     /bin/bash awsTierDeploy.sh $base_url
+     /bin/bash awsTierDeploy.sh $s3_bucket
      # Tell the user what Hugo will use as the base for generating URLs
-     echo "Using the base URL:" ${base_url}
+     echo "Syncing to " ${s3_bucket}
+     echo "Base url is " ${HUGO_BASE_URL}
 fi
