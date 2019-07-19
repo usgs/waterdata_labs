@@ -3,7 +3,7 @@ version: "3"
 services:
   hugo:
     build: .
-    command: server --buildDrafts
+    command: bash buildDeploy.sh server --buildDrafts
     ports:
       - "1313:1313"
     volumes:

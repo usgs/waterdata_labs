@@ -26,19 +26,20 @@ fi
 if [[ $ARGUMENT_TWO == 'prod' ]]
     then
     s3_bucket=labs-prod-website
-    HUGO_BASEURL=https://labs.waterdata.usgs.gov
+    HUGO_BASEURL=https://labs.waterdata.usgs.gov/
 
 elif [[ $ARGUMENT_TWO == 'qa' ]]
     then
     s3_bucket=labs-beta-website
-    HUGO_BASEURL=https://lab-beta.waterdata.usgs.gov
+    HUGO_BASEURL=https://lab-beta.waterdata.usgs.gov/
 
 elif [[ $ARGUMENT_TWO == 'test' ]]
     then
     s3_bucket=labs-test-website
-    HUGO_BASEURL=http://labs-test-website.s3-website-us-west-2.amazonaws.com
+    HUGO_BASEURL=http://labs-test-website.s3-website-us-west-2.amazonaws.com/
 else
     s3_bucket=labs-test-website
+    HUGO_BASEURL=https://localhost:1313/
     echo "No valid deployment tier was submitted to application (not necessarily an error)."
 fi
 
