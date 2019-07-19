@@ -1,5 +1,5 @@
-waterdata
-------------
+Water Data Labs
+---------------
 
 *Landing page for Water Data for the Nation related projects*
 
@@ -32,16 +32,11 @@ The default Hugo server instance will include draft articles.
 
 ## Build static site
 
-Using `docker-compose`, the site may be built using the `build` command provided by the container:
+If you only want to build the hugo static files execute the following commands
 
 ```bash
-docker-compose run hugo build
-```
-
-Additional arguments may be passed to the Hugo binary as the last argument:
-
-```bash
-docker-compose run hugo build --buildDrafts
+docker-compose build 
+docker-compose run hugo bash buildDeploy.sh build --buildDrafts
 ```
 
 ## Debugging the container
