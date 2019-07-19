@@ -3,8 +3,10 @@
 set -eux -o pipefail
 
 HUGO_COMMAND=$1
-ARGS=${@:2}
+HUGO_BASEURL=$2
+ARGS=${@:3}
 
+export HUGO_BASEURL=${HUGO_BASEURL}
 case ${HUGO_COMMAND} in
     build)
         cd /src/themes/wdfn_theme

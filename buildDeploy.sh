@@ -43,7 +43,7 @@ else
 fi
 
 # run the script for the running Hugo
-/bin/bash hugoCommand.sh $HUGO_COMMAND
+/bin/bash hugoCommand.sh $HUGO_COMMAND $HUGO_BASEURL
 
 echo "Base url is " ${HUGO_BASEURL}
 
