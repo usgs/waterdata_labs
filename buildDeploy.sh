@@ -31,7 +31,7 @@ if [[ $ARGUMENT_TWO == 'prod' ]]
 elif [[ $ARGUMENT_TWO == 'qa' ]]
     then
     s3_bucket=labs-beta-website
-    HUGO_BASEURL=https://lab-beta.waterdata.usgs.gov/
+    HUGO_BASEURL=https://labs-beta.waterdata.usgs.gov/
 
 elif [[ $ARGUMENT_TWO == 'test' ]]
     then
