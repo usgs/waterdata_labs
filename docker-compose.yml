@@ -1,9 +1,13 @@
 version: "3"
 
 services:
+  hugo_base:
+    build: ./
   hugo:
-    build: .
-    command: bash buildDeploy.sh server --buildDrafts
+    build:
+      context: ./
+      dockerfile: Dockerfile_hugo
+    command: tail -F anything
     ports:
       - "1313:1313"
     volumes:
