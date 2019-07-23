@@ -1,10 +1,6 @@
 ---
-date: 2019-04-25
-slug: graph-image-api
-type: post
+slug: about-graph-image-api
 title: Graph Image API
-categories:
-  - Graph Image API
 description: Information about the Graph Image API.
 keywords:
   - Graph

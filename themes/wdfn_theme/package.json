@@ -9,7 +9,7 @@
     "clean": "rm -rf static && mkdirp static",
     "build": "npm run clean && run-p build:* && npm run hash-assets",
     "build:css": "mkdirp static/css && node-sass --include-path node_modules/wdfn-viz/src/stylesheets --include-path node_modules/@fortawesome/fontawesome-free/scss src/styles/main.scss static/css/main.css && postcss static/css/main.css -o static/css/main.css",
-    "build:fonts": "mkdirp static/fonts && cp src/fonts/* static/fonts && cp -r node_modules/wdfn-viz/dist/fonts/* static/fonts && cp node_modules/@fortawesome/fontawesome-free/webfonts/* static/fonts",
+    "build:fonts": "mkdirp static/fonts && cp src/fonts/* static/fonts && cp -r node_modules/wdfn-viz/dist/fonts/* static/fonts",
     "build:images": "mkdirp static/img && cp -r src/images/* static/img && cp -r node_modules/wdfn-viz/dist/img/* static/img",
     "build:js": "mkdirp static/scripts && rollup -c --environment NODE_ENV:production",
     "hash-assets": "gulp --gulpfile ./gulpfile.js revall",
@@ -40,7 +40,6 @@
   },
   "homepage": "https://github.com/usgs/wdfn-updates#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.9.0",
     "wdfn-viz": "^1.0.1"
   },
   "devDependencies": {
@@ -49,7 +48,6 @@
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
     "gulp-rev-all": "^2.0.2",
-    "jquery": "^3.4.1",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.12.0",
     "nodemon": "^1.19.1",
