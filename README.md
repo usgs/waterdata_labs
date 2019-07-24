@@ -25,7 +25,8 @@ building the static site which may deployed to Amazon Web Services through a tas
 Using `docker-compose`, you may run a Hugo development server on http://localhost:1313:
 
 ```bash
-docker-compose up
+docker-compose build hugo_base
+docker-compose up hugo
 ```
 
 The default Hugo server instance will include draft articles.
@@ -35,8 +36,7 @@ The default Hugo server instance will include draft articles.
 If you only want to build the hugo static files execute the following commands
 
 ```bash
-docker-compose build 
-docker-compose run hugo bash buildDeploy.sh build --buildDrafts
+docker-compose up hugo_base buildDeplay.sh build --buildDrafts 
 ```
 
 ## Debugging the container

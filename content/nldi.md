@@ -1,10 +1,6 @@
 ---
-date: 2019-04-25
-slug: nldi
-type: post
+slug: about-nldi
 title: Hydro-Network Linked Data Index
-categories:
-  - Hydro-Network Linked Data Index
 description: Information about the Hydro-Network Linked Data Index.
 keywords:
   - Hydro-Network

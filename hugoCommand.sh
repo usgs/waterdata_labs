@@ -19,7 +19,7 @@ case ${HUGO_COMMAND} in
         cd /src/themes/wdfn_theme
         npm install
         npm run build
-        npm run watch & cd /src && hugo server --bind=0.0.0.0 ${ARGS}
+        npm run watch & cd /src && hugo server --watch --bind=0.0.0.0 ${ARGS}
         ;;
     *)
     exec "$@"

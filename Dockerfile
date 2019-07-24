@@ -1,4 +1,4 @@
-FROM usgswma/python:debian-slim-stretch-python-3.6-24e21a7a7fc0ecea73ebfd36da71c320c3fb803d
+FROM usgswma/python:debian-slim-stretch-python-3.6-24e21a7a7fc0ecea73ebfd36da71c320c3fb803d AS hugo_base
 
 RUN apt-get update
 RUN apt-get install -y \
@@ -23,4 +23,3 @@ RUN apt-get install -y nodejs
 # This will allow Hugo to run from the container created from the image.
 COPY . /src
 WORKDIR /src
-

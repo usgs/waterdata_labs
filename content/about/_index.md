@@ -1,7 +1,5 @@
 ---
 title: About Water Data Labs
-categories:
-  - About WDFN Labs
 description: Information about the USGS Water Data for the Nation Labs.
 keywords:
   - labs information
