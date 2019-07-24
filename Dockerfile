@@ -23,7 +23,3 @@ RUN apt-get install -y nodejs
 # This will allow Hugo to run from the container created from the image.
 COPY . /src
 WORKDIR /src
-
-
-
-
