@@ -1,7 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## Unreleased
+
+## 25-Jul-2019
 ### Added
 - Created the initial Hugo site and setup Docker containerization  and Jenkins tiered build and deploy to AWS.
 - Added an about page
