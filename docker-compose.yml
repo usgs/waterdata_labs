@@ -3,6 +3,7 @@ version: "3"
 services:
   hugo_base:
     build: ./
+    container_name: hugo_base
   hugo:
     build:
       context: ./

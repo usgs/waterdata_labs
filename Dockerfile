@@ -1,4 +1,4 @@
-FROM usgswma/python:debian-slim-stretch-python-3.6-24e21a7a7fc0ecea73ebfd36da71c320c3fb803d AS hugo_base
+FROM usgswma/python:debian-slim-stretch-python-3.6-24e21a7a7fc0ecea73ebfd36da71c320c3fb803d
 
 RUN apt-get update
 RUN apt-get install -y \
