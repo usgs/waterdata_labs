@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 
 ## Unreleased
+### Added
+- Added a content page for the NWISWeb Tableau Data Connector
+
+
 
 ## 25-Jul-2019
 ### Added
@@ -9,7 +13,6 @@ All notable changes to this project will be documented in this file.
 - Added an about page
 - Updated to the latest wdfn-viz package which uses USWDS 2.0.x
 - Added a separate docker-compose service to separate building the base from running the hugo command.
-- Added a content page for the NWISWeb Tableau Data Connector
 
 ## Changed
 - Removed unused layouts and simplified wdfn_theme style sheets by eliminating unused styles
