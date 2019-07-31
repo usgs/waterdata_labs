@@ -13,11 +13,20 @@ keywords:
   - Connector
 ---
 
+# NWISWeb Tableau Web Data Connector
 
-The NWISWeb Tableau Data Connector provides USGS Water data and an accompanying Tableau schema for each parameter for each site, including geographic coordinates and datetimes for each observation. When invoking this system through the Tableau web data connector option, the data is automatically loaded into Tableau in the format specified by the generated schema.
+- How to use the NWISWeb Tableau Web Data Connector
+This system requires a desktop Tableau client. To use this system, first install a Tableau desktop client on your PC then enter the URL for this page under the web data connector option in the connect menu. Details of the constraints imposed by the database that feeds this tool are available here.
+
+
+
+- Who is this system designed for ?
 This system is designed for users of the Tableau software who want to seamlessly integrate USGS Water data into their analytics operations. This system is open to the public.
-The NWISWeb Tableau Data Connector requires a desktop Tableau client. To use this system, first install a Tableau desktop client on your PC then enter the URL for this page under the web data connector option in the connect menu. Details of the constraints imposed by the database that feeds this tool are available here.
 
+
+
+- What does this system provide ?
+This system provides USGS Water data and an accompanying Tableau schema for each parameter for each site, including geographic coordinates and datetimes for each observation. When invoking this system through the Tableau web data connector option, the data is automatically loaded into Tableau in the format specified by the generated schema.
 
 
 
