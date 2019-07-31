@@ -32,4 +32,5 @@ This system provides USGS Water data and an accompanying Tableau schema for each
 
 Questions
 ==========
-Questions or comments about the Water for the Nation Projects? [here.](https://water.usgs.gov/contact/gsanswers?pemail=gs-w-ks_NWISWeb_Data_Inquiries&subject=Site+Number%3A+07144100&viewnote=%3CH1%3EUSGS+NWIS+Feedback+Request%3C%2FH1%3E%3Cp%3E%3Cb%3EPlease+enter+a+subject+in+the+form+below+that+briefly+summarizes+your+request%3C%2Fb%3E%3C%2Fp%3E) 
+Questions or comments about the Water for the Nation Projects? [here.](https://water.usgs.gov/contact/gsanswers?pemail=gs-w-ks_NWISWeb_Data_Inquiries&subject=Site+Number%3A+07144100&viewnote=%3CH1%3EUSGS+NWIS+Feedback+Request%3C%2FH1%3E%3Cp%3E%3Cb%3EPlease+enter+a+subject+in+the+form+below+that+briefly+summarizes+your+request%3C%2Fb%3E%3C%2Fp%3E)  
+Bug reports or feature requests are open to the public under the "issues" section [here.](https://github.com/usgs/nwisweb-tableau-data-connector)
