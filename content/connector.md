@@ -1,6 +1,6 @@
 ---
 date: 2019-07-31
-slug: connector
+slug: about-connector
 type: post
 title: NWISWeb Tableau Data Connector
 categories:
