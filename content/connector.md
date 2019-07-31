@@ -15,7 +15,10 @@ keywords:
 
 # NWISWeb Tableau Web Data Connector
 
-- How to use the NWISWeb Tableau Web Data Connector
+- Where can I find the NWISWeb Tableau Data Connector?
+The NWISWeb Tableau Data Connector is available [here.](labs.waterdata.usgs.gov/tableau-connector)
+
+- How to use the NWISWeb Tableau Data Connector
 This system requires a desktop Tableau client. To use this system, first install a Tableau desktop client on your PC then enter the URL for this page under the web data connector option in the connect menu. Details of the constraints imposed by the database that feeds this tool are available here.
 
 
