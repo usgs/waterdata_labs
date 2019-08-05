@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 
 ## Unreleased
+### Added
+- Added a content page for the NWISWeb Tableau Data Connector
+
+
 
 ## 25-Jul-2019
 ### Added
