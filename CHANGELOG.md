@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 ## Unreleased
 ### Added
 - Added a content page for the NWISWeb Tableau Data Connector
+- Updated content of all pages
 
 
 
