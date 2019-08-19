@@ -1,4 +1,4 @@
-FROM usgswma/python:debian-slim-stretch-python-3.6-24e21a7a7fc0ecea73ebfd36da71c320c3fb803d
+FROM usgswma/python:debian-slim-buster-python-3.6-4117b859d9051a96f5d9729198769d2205424c99
 
 RUN apt-get update
 RUN apt-get install -y \

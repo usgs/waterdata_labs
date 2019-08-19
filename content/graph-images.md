@@ -14,7 +14,7 @@ Recently, the Water Data for the Nation (WDFN) development [released a new real-
 [https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=09380000&parm_cd=00060&period=7](https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=09380000&parm_cd=00060&period=7)
 ![Legacy Graph Image](/static/graph-images/legacy_graph_image.png)
 
-However, the new graphs are not so easy to generate, as they are dynamically generated in the web browser using a tool called D3. Replicating the environment of a browser was a non-trivial task, but with the major advances in automated browser testing with tools like [puppeteer](https://developers.google.com/web/tools/puppeteer/), we were able to generate a reasonable solution.
+However, the new graphs are not easy to generate, as they are dynamically generated in the web browser using a tool called D3. Replicating the environment of a browser was a non-trivial task, but with the major advances in automated browser testing with tools like [puppeteer](https://developers.google.com/web/tools/puppeteer/), we were able to generate a reasonable solution.
 ![Graph API Image](/static/graph-images/api_graph_image.png)
 
 
