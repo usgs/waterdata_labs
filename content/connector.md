@@ -15,7 +15,7 @@ keywords:
 
 # Water Data for the Nation Tableau Web Data Connector
 
-The [Water Data for the Nation (WDFN) Tableau Web Data Connector (WDC)](https://labs.waterdata.usgs.gov/tableau-connector) is designed for users of the Tableau software who want to seamlessly integrate USGS Water data into their analytics operations. This system is open to the public, and is currently configured for the [waterservices.usgs.gov instantaneous values (IV) service](https://waterservices.usgs.gov/rest/IV-Service.html).
+The [Water Data for the Nation (WDFN) Tableau Web Data Connector (WDC)](https://labs.waterdata.usgs.gov/tableau-connector) is designed for users of the Tableau software who want to seamlessly integrate USGS Water data into their analytics operations. This system is open to the public and is currently configured for the [waterservices.usgs.gov instantaneous values (IV) service](https://waterservices.usgs.gov/rest/IV-Service.html).
 
 The WDFN WDC system provides USGS Water data and an accompanying Tableau schema for each parameter for each site, including geographic coordinates and datetimes for each observation. When invoking this system through the Tableau web data connector option, the JSON data from the WDFN IV web services is automatically loaded into Tableau in the format specified by the generated schema.
 
