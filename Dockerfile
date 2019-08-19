@@ -17,7 +17,7 @@ RUN tar xzf hugo.tar.gz -C /usr/local/bin
 # Install node.js from official package.
 RUN curl --silent --location https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get -y update
-RUN apt-get install -y nodejs
+RUN apt-get install -y nodejs npm
 
 # Copy the local working directory to the Docker image and set it as the working directory.
 # This will allow Hugo to run from the container created from the image.
