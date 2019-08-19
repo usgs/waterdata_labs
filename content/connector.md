@@ -1,5 +1,5 @@
 ---
-date: 2019-08-20
+date: 2019-08-19
 slug: about-connector
 type: post
 title: WDFN Tableau Data Connector
