@@ -21,5 +21,10 @@ pipeline {
         sh "/src/buildDeploy.sh build ${DEPLOY_TIER} sync_yes"
       }
     }
+    stage('Clean Workspace') {
+      steps {
+        cleanWs()
+      }
+    }
   }
 }
