@@ -1,6 +1,6 @@
 {{ define "main" }}
   <h1>Welcome to Water Data Labs</h1>
-  <p>Water Data Labs is an experimental  site that exposes tools and technologies in development by the USGS Water Data for the Nation software team. Here, users can explore and test experimental products before they are incorporated into production systems. Some of the services, tools and visualizations that seen here will eventually make to the core waterdata.usgs.gov or <a href="https://waterservices.usgs.gov">waterservices.usgs.gov</a> sites, but some may not.</p>
+  <p>Water Data Labs is an experimental  site that exposes tools and technologies in development by the USGS Water Data for the Nation software team. Here, users can explore and test experimental products before they are incorporated into production systems. Some of the services, tools and visualizations that seen here will eventually make to the core <a href="https://waterdata.usgs.gov">waterdata.usgs.gov</a> or <a href="https://waterservices.usgs.gov">waterservices.usgs.gov</a> sites, but some may not.</p>
 
   <p>Examples of products hosted on this site include:</p>
 
@@ -14,10 +14,14 @@
   <li><p>Experimental datasets and data integrations</p></li>
   </ul>
 
-  <p>Please explore these tools, use them, and <a href="https://water.usgs.gov/contact/gsanswers?pemail=gs-w-ks_NWISWeb_Data_Inquiries&amp;subject=Site+Number%3A+07144100&amp;viewnote=%3CH1%3EUSGS+NWIS+Feedback+Request%3C%2FH1%3E%3Cp%3E%3Cb%3EPlease+enter+a+subject+in+the+form+below+that+briefly+summarizes+your+request%3C%2Fb%3E%3C%2Fp%3E">contact us</a> with questions or comments. The code behind this site and the applications can be found on Github, <a href="https://github.com/topics/usgs-waterdata-labs">tagged with usgs-waterdata-labs</a>.  Pull requests and new issues are always welcome!</p>
+  <p>Please explore these tools, use them, and
+    <a href="https://water.usgs.gov/contact/gsanswers?pemail=gs-w-ks_NWISWeb_Data_Inquiries&amp;subject=Site+Number%3A+07144100&amp;viewnote=%3CH1%3EUSGS+NWIS+Feedback+Request%3C%2FH1%3E%3Cp%3E%3Cb%3EPlease+enter+a+subject+in+the+form+below+that+briefly+summarizes+your+request%3C%2Fb%3E%3C%2Fp%3E">contact us</a>
+    with questions or comments. The code behind this site and the applications
+    can be found on Github, <a href="https://github.com/topics/usgs-waterdata-labs">tagged
+      with usgs-waterdata-labs</a>.  Pull requests and new issues are always welcome!</p>
   <ul>
     {{ range $key, $value := .Paginator.Pages }}
-      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      <li><p><h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3></p></li>
     {{ end }}
   </ul>
 {{ end }}
