@@ -1,10 +1,10 @@
 ---
 date: 2019-08-19
 slug: about-connector
-type: post
-title: Water Data for the Nation Tableau Web Data Connector
+title: WDFN Tableau Data Connector
 categories:
   - Web Data Connector
+type: post
 description: Information about the Water Data for the Nation Tableau Data Connector.
 keywords:
   - Tableau

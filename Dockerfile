@@ -1,4 +1,4 @@
-FROM usgswma/python:debian-slim-stretch-python-3.6-24e21a7a7fc0ecea73ebfd36da71c320c3fb803d
+FROM usgswma/python:debian-slim-buster-python-3.6-4117b859d9051a96f5d9729198769d2205424c99
 
 RUN apt-get update
 RUN apt-get install -y \
@@ -15,7 +15,7 @@ RUN curl --silent --location https://github.com/gohugoio/hugo/releases/download/
 RUN tar xzf hugo.tar.gz -C /usr/local/bin
 
 # Install node.js from official package.
-RUN curl --silent --location https://deb.nodesource.com/setup_8.x | bash -
+RUN curl --silent --location https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get -y update
 RUN apt-get install -y nodejs
 
