@@ -1,10 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## Unreleased
+# Unreleased
+
+## 11-Sep-2019
 ### Added
 - Added a content page for the NWISWeb Tableau Data Connector
 - Updated content of all pages
+- cleaned up figures
 
 
 
