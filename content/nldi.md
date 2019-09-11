@@ -1,4 +1,5 @@
 ---
+date: 2019-12-19
 slug: about-nldi
 title: Hydro-Network Linked Data Index
 description: Information about the Hydro-Network Linked Data Index.
