@@ -5,3 +5,5 @@ email = ["jkreft@usgs.gov"]
 paginate = 100
 theme = "wdfn_theme"
 disableKinds=["taxonomyTerm"]
+PygmentsCodeFences = true
+PygmentsStyle = "manni"
