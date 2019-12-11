@@ -5,7 +5,6 @@ Water Data Labs
 
 # Welcome to the experimental space of waterdata.usgs.gov!
 
-    ---
 labs.waterdata.usgs.gov is where the development team that is putting together the new face of waterdata.usgs.gov will 
 be hosting new services and sometimes user interfaces that, while production grade, may not be the final form that we
  want to support for a long time.  These services may change or go away at any time.  

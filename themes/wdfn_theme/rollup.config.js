@@ -4,7 +4,7 @@
  */
 const path = require('path');
 
-const alias = require('rollup-plugin-alias');
+const alias = require('@rollup/plugin-alias');
 const buble = require('rollup-plugin-buble');
 const resolve = require('rollup-plugin-node-resolve');
 const { uglify } = require('rollup-plugin-uglify');
@@ -16,7 +16,9 @@ module.exports = {
     input: 'src/scripts/index.js',
     plugins: [
         alias({
-            ngwmn: path.resolve(__dirname, 'src/scripts'),
+            entries: [
+                {find: 'ngwmn', replacement: path.resolve(__dirname, 'src/scripts')}
+                ],
             resolve: ['.js', '.json']
         }),
         resolve({
