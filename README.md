@@ -35,7 +35,7 @@ The default Hugo server instance will include draft articles.
 If you only want to build the hugo static files execute the following commands
 
 ```bash
-docker-compose up hugo_base buildDeplay.sh build --buildDrafts 
+docker-compose up hugo_base buildDeploy.sh build --buildDrafts 
 ```
 
 ## Debugging the container
