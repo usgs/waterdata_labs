@@ -46,6 +46,24 @@ If the need arises, you may run arbitrary commands in the container, such as a b
 docker-compose run hugo bash -l
 ```
 
+# Build and develop on your local machine
+
+In order to do this you need to install hugo on your machine (see https://gohugo.io/getting-started/installing/)
+
+You will also need to have the version of node the project is using which is currently 12.x.x. To build the static files
+required by the application execute the following commands:
+```bash
+% cd themes/wdfn_theme
+% rm -rf node_modules
+% npm clean
+% npm install
+% npm build
+```
+
+You will then need to return to the project root directory and then execute:
+```bash
+% hugo server -D
+```
 Disclaimer
 ----------
 This software is preliminary or provisional and is subject to revision. It is being provided to meet the need for

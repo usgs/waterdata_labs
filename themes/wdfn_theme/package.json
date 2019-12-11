@@ -20,7 +20,7 @@
     "watch:js": "rollup -c --watch"
   },
   "engines": {
-    "node": "10.17.0"
+    "node": ">= 12.13.1"
   },
   "repository": {
     "type": "git",
