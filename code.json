@@ -1,0 +1,49 @@
+[
+  {
+    "name": "Water Data Labs",
+    "organization": "U.S. Geological Survey",
+    "description": "Water Data Labs front page which describes what water data labs is and what products are currently available."
+    "version": "1.0.0",
+    "status": "Development",
+
+    "permissions": {
+      "usageType": "openSource",
+      "licenses": [
+        {
+          "name": "Public Domain, CC0-1.0",
+          "URL": "https://github.com/usgs/waterdataui/blob/master/LICENSE.md"
+        }
+      ]
+    },
+
+    "homepageURL": "https://github.com/usgs/waterdataui",
+    "downloadURL": "https://github.com/usgs/waterdataui/archive/master.zip",
+    "disclaimerURL": "https://github.com/usgs/waterdataui/blob/master/LICENSE.md",
+    "repositoryUrl": "https://github.com/usgs/waterdataui.git",
+    "vcs": "git",
+
+    "laborHours": null,
+
+    "tags": [
+      "water data",
+      "experimental"
+    ],
+
+    "languages": [
+      "hugo",
+      "javascript",
+      "markdown",
+      "html",
+      "sass"
+    ],
+
+    "contact": {
+      "name": "Mary Bucknell",
+      "email": "mbucknell@usgs.gov"
+    },
+
+    "date": {
+      "metadataLastUpdated": "2017-12-18"
+    }
+  }
+]
