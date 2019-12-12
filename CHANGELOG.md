@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 # Unreleased
 
 
-## 11-Dec-2019
+## 12-Dec-2019
 ### Changed
 - Updated the hugo version used and node version to the latest LTS.
 
