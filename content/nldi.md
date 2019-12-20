@@ -1,5 +1,5 @@
 ---
-date: 2019-12-19
+date: 2019-12-31
 slug: about-nldi
 title: Hydro-Network Linked Data Index
 description: Information about the Hydro-Network Linked Data Index.
@@ -9,14 +9,17 @@ keywords:
 image: /static/nldi/RioGrandeStreamGage.jpg
 ---
 
-A very common question that we get from users of Water Data for the Nation is that we should make it easy to see the monitoring locations that are upstream and downstream of the monitoring location that they are looking at.  We agree! The good news is that the USGS has a remarkable dataset called the National Hydrologic Dataset (NHD) that is capable of answering just this question.  The challenge is that the National Hydrologic Dataset has its origins as a cartographic tool, and its is primary audience were cartographers and GIS analysts.  The NLDI is a first step toward making the data behind the NHD more accessible and useable for a larger audience, by building a RESTful API in front of it. The Hydro-Network Linked Data Index (NLDI)  is a system that can index data to [NHDPlus V2](http://www.horizon-systems.com/NHDPlus/V2NationalData.php) catchments and offers a search service to discover indexed information. The NLDI is a first step toward making the data behind the NHD more accessible and useable for a larger audience, by building a RESTful API in front of it.
+Users of USGS Water data products often want to know both how a location rleates to other stations as well as how that station relates to the broader physical world. For example, users often want to know:
 
-So what does this MEAN?  That with just a little code, any web developer can start to ask and answer questions, such as
-
-* What other stream gages are upstream or downstream of me?
-* Where does the water go?
+* What other stream gages are upstream or downstream of me? 
+* Where does the water come from?
 * How big or small is the upstream basin for a location?
 * What ocean does this river flow into?
+
+
+The good news is that the USGS has a remarkable dataset called [the National Hydrologic Dataset (NHD)]() that is capable of answering just these kinds of questions.  The challenge is that the NHD has its origins as a cartographic tool, and its primary audience historically has been cartographers and GIS analysts.  Our goal in the water data team is to make the data in the  NHD available to new audiences, and as a first step, we have developed the NLDI, which puts a restful Application Programming Interface API in front of the NHD dataset. Now, instead of need to be be a GIS professional, any web developer can build tool against the data in the NHD in a scalable, workable way. The Hydro-Network Linked Data Index (NLDI). In addition, any  is a system that can index data to [NHDPlus V2](https://www.horizon-systems.com/NHDPlus/V2NationalData.php) catchments and offers a search service to discover indexed information. 
+
+
 
 {{< figure src="/static/nldi/downstream.png" caption="A screenshot of all Water Quality Portal sites upstream and downstream of NWIS site 08279500, [Rio Grande at Embudo, NM](https://waterdata.usgs.gov/monitoring-location/08279500/)" >}}
 
@@ -26,4 +29,4 @@ You can also see the NLDI in action at the [Water Quality Portal](https://www.wa
 
 To learn more about the NLDI, please check out [this extensive blog post that goes over the basic features of NLDI](https://waterdata.usgs.gov/blog/nldi-intro/).  There will be more coming about the NLDI soon.
 
-Try it out and [contact us](https://water.usgs.gov/contact/gsanswers?pemail=gs-w_water_data_for_the_nation&subject=Water%20Data%20for%20the%20Nation%20Labs%20Feedback&viewnote=%3CH1%3EUSGS+NLDI+Feedback%3C/H1%3E)about how it works for you.
+Try it out and [contact us](https://water.usgs.gov/contact/gsanswers?pemail=gs-w_water_data_for_the_nation&subject=Water%20Data%20for%20the%20Nation%20Labs%20Feedback&viewnote=%3CH1%3EUSGS+NLDI+Feedback%3C/H1%3E) about how it works for you.

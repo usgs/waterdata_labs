@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 # Unreleased
 
+## 20-Dec-2019
+### Changed
+- updated graph-images content
+- added link to water availability viz
 
 ## 12-Dec-2019
 ### Changed

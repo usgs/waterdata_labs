@@ -5,3 +5,14 @@ email = ["jkreft@usgs.gov"]
 paginate = 100
 theme = "wdfn_theme"
 disableKinds=["taxonomyTerm"]
+
+[markup]
+  [markup.highlight]
+    codeFences = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "solarized-light"
+    tabWidth = 4
