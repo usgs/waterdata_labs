@@ -6,9 +6,10 @@ paginate = 100
 theme = "wdfn_theme"
 disableKinds=["taxonomyTerm"]
 
+
 [markup]
   [markup.highlight]
-    codeFences = false
+    codeFences = true
     hl_Lines = ""
     lineNoStart = 1
     lineNos = false
@@ -16,3 +17,5 @@ disableKinds=["taxonomyTerm"]
     noClasses = true
     style = "solarized-light"
     tabWidth = 4
+  [markup.goldmark.renderer]
+    unsafe= true
