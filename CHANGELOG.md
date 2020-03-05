@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 # Unreleased
+### Changed
+- Updated to use build guidance from USWDS version 2.5.1 and use wdfn-viz 1.4.0
 
 ## 20-Dec-2019
 ### Changed
