@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/usgs/wdfn-updates#readme",
   "dependencies": {
-    "wdfn-viz": "1.2.0"
+    "wdfn-viz": "1.4.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.3",
