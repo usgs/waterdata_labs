@@ -55,7 +55,6 @@ required by the application execute the following commands:
 ```bash
 % cd themes/wdfn_theme
 % rm -rf node_modules
-% npm clean
 % npm install
 % npm build
 ```
