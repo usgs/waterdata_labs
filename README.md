@@ -56,7 +56,7 @@ required by the application execute the following commands:
 % cd themes/wdfn_theme
 % rm -rf node_modules
 % npm install
-% npm build
+% npm run build
 ```
 
 You will then need to return to the project root directory and then execute:
