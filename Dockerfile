@@ -1,4 +1,4 @@
-FROM usgswma/python:debian-slim-buster-python-3.6-4117b859d9051a96f5d9729198769d2205424c99
+FROM usgswma/python:debian-slim-buster-python-3.8
 
 RUN apt-get update
 RUN apt-get install -y \
@@ -10,7 +10,7 @@ RUN apt-get install -y \
 RUN pip install awscli
 
 # Install Hugo from tar distribution to /usr/local/bin
-ARG HUGO_VERSION="0.61.0"
+ARG HUGO_VERSION="0.69.0"
 RUN curl --silent --location https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz > hugo.tar.gz
 RUN tar xzf hugo.tar.gz -C /usr/local/bin
 
