@@ -1,9 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-# Unreleased
+# 12-May-2020
 ### Changed
 - Updated to use build guidance from USWDS version 2.6.0 and use wdfn-viz 1.5.0
+- Updated graph-image-api description to include new openAPI documentation
 
 ## 20-Dec-2019
 ### Changed

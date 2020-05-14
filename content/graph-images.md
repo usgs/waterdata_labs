@@ -37,14 +37,14 @@ So now, it is possible to render a contemporary graph from water data for the na
 
 {{< figure src="https://labs.waterdata.usgs.gov/api/graph-images/monitoring-location/09380000/?parameterCode=00060" alt="A line graph showing 7 days of hydrological data.  The line is orange, with black axes" title="Future graph image, rendered server-side using client-side code with puppeteer" >}}
 
-[https://labs.waterdata.usgs.gov/api/graph-images/monitoring-location/09380000/?parameterCode=00060](/api/graph-images/monitoring-location/09380000/?parameterCode=00060)
+[https://labs.waterdata.usgs.gov/api/graph-images/monitoring-location/09380000/?parameterCode=00060](https://labs.waterdata.usgs.gov/api/graph-images/monitoring-location/09380000/?parameterCode=00060)
 
 
 
-The graph image project is a work in progress and this is a first step to meeting users’ requests for easy image downloads. Future enhancements include:
+The graph image project is a work in progress and this is a first step to meeting users’ requests for 
+easy image downloads. We have added [openAPI based documentation](https://labs.waterdata.usgs.gov/api/graph-images/api-docs/) so that users can easily see how to customize
+the images using available query parameters. The user can no customize the size, title, time period, and time series ID.
 
-* openAPI based documentation
-* custom time ranges
 * additional data elements
 * different kinds of graphs beyond the basic hydrograph
 * making it possible to embed dynamic content, rather than just images, in third party pages.
