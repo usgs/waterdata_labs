@@ -1,9 +1,18 @@
--
-thing: brush on hydrograph
-status: done
--
-thing: upstream basin
-status: done
--
-thing: daily value hydrograph
-status: upcoming
+--- 
+categories: 
+  - 
+    name: "Extend monitoring location pages"
+    status: "in progress"
+    things: 
+      - 
+        status: done
+        thing: "brush on hydrograph"
+      - 
+        status: on deck
+        thing: "upstream basin"
+      - 
+        status: upcoming
+        thing: "daily value hydrograph"
+  -
+    name: "Stakeholder outreach"
+    status: "in progress"

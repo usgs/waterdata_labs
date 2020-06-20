@@ -73,7 +73,7 @@ pre {
 }
 
 .label-beta,
-.label-next {
+.label-on-deck {
   @extend %label-maturity;
   background-color: color("primary-vivid");
   color: color("white");
