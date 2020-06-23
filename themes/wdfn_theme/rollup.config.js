@@ -21,7 +21,7 @@ module.exports = {
                 ],
             resolve: ['.js', '.json']
         }),
-        resolve({
+        resolve.nodeResolve({
             mainFields: ['module']
         }),
         buble({
