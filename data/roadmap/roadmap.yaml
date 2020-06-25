@@ -1,0 +1,100 @@
+--- 
+# allowed "status" values: "upcoming", "on deck", "in progress", "done"
+
+categories:
+  - 
+    name: "Extend monitoring location pages"
+    status: "in progress"
+    things: 
+      - 
+        thing: "Brush on hydrograph"
+        status: done
+      -
+        thing: "Upstream basin"
+        status: on deck
+      - 
+        thing: "Groundwater Daily value hydrograph"
+        status: in progress
+      - status: Done
+        thing: "Celsius and Fahrenheit Degrees on Temperature Scales"
+      - status: Done
+        thing: "Axis Scaling"
+      - status: Done
+        thing: "Multiple Time Series with the Same Parameter"
+      - status: Done
+        thing: "Toggling the Median"
+      - status: Done
+        thing: "Monitoring Location Cameras"
+      - status: Done
+        thing: "NLDI on the Cloud"
+      - status: Done
+        thing: "Brush on Hydrograph"
+      - status: Done
+        thing: "Brush Handles"
+      - status: Done
+        thing: "Repositories Page"
+      - status: Done
+        thing: "Collapsible Legend on NLDI Maps"
+      - status: Done
+        thing: "Save State of Hydrograph"
+      - status: Done
+        thing: "Use NLDI to Show Upstream Basin"
+      - status: Done
+        thing: "Add User Parameters to Graph-images Service"
+      - status: Done
+        thing: "Image Export"
+      - status: Done
+        thing: "Parameter Period of Record"
+      - status: Done
+        thing: "Networks Pages"
+      - status: On Deck
+        thing: "Upstream basin"
+  -
+    name: "Stakeholder Outreach"
+    status: "In Progress"
+    things:
+       -
+        status: In Progress
+        thing: "Water quality outreach and listening sessions"
+       -
+        status: In Progress
+        thing: "NWIS Annual Survey"
+       -
+        status: Done
+        thing: "NWISweb User Research (18F Phase I)"
+       -
+        status: In Progress
+        thing: "WDFN User Testing (18F Phase II)"
+  -
+    name: "Data Delivery Services"
+    status: "In Progress"
+    things:
+       -
+        status: Done
+        thing: "MVP of Daily Values Data Service"
+       -
+        status: In Progress
+        thing: "MVP of Discrete GroundWater Levels Data Service"
+       -
+        status: On Deck
+        thing: "MVP of Instantaneous Data Service"
+       -
+        status: Upcoming
+        thing: "Daily Values Data Service (all data)"
+
+  -
+    name: "Networks of related locations"
+    status: "in progress"
+    things:
+      -
+        thing: "Network data management"
+        status: in progress
+  -
+    name: "Next generation observation services"
+    status: "in progress"
+
+# reach goals are simpler, just a single phrase or sentence to describe a thing that we may do.  If it really becomes a
+# thing we will do, it gets promoted to categories and is broken down as neccessary
+reach_goals:
+  - Prototype Alert Service
+  - Search and Filter Prototype (18F Phase II, deployed to demo space)
