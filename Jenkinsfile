@@ -1,7 +1,7 @@
 pipeline {
   agent {
     node {
-      label 'project:any'
+      label 'team:iow'
     }
   }
   parameters {
