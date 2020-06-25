@@ -1,21 +1,36 @@
 --- 
-categories: 
+# allowed "status" values: "upcoming", "on deck", "in progress", "done"
+
+categories:
   - 
     name: "Extend monitoring location pages"
     status: "in progress"
     things: 
       - 
+        thing: "Brush on hydrograph"
         status: done
-        thing: "brush on hydrograph"
-      - 
+      -
+        thing: "Upstream basin"
         status: on deck
-        thing: "upstream basin"
       - 
-        status: upcoming
-        thing: "daily value hydrograph"
+        thing: "Groundwater Daily value hydrograph"
+        status: in progress
   -
     name: "Stakeholder outreach"
     status: "in progress"
+  -
+    name: "Networks of related locations"
+    status: "in progress"
+    things:
+      -
+        thing: "Network data management"
+        status: in progress
+  -
+    name: "Next generation observation services"
+    status: "in progress"
+
+# reach goals are simpler, just a single phrase or sentence to describe a thing that we may do.  If it really becomes a
+# thing we will do, it gets promoted to categories and is broken down as neccessary
 reach_goals:
   - Prototype alert service
   - do the thing
