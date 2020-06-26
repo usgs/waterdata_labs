@@ -3,7 +3,7 @@
 
 categories:
   - 
-    name: "Extend monitoring location pages"
+    name: "Next-gen landing pages with improved user navigation"
     status: "in progress"
     things: 
       - 
@@ -13,42 +13,35 @@ categories:
         thing: "Upstream basin"
         status: on deck
       - 
-        thing: "Groundwater Daily value hydrograph"
+        thing: "Groundwater daily value hydrograph"
         status: in progress
       - status: Done
-        thing: "Celsius and Fahrenheit Degrees on Temperature Scales"
+        thing: "Celsius and fahrenheit degrees on temperature scales"
       - status: Done
-        thing: "Axis Scaling"
+        thing: "Refine axis scaling"
       - status: Done
-        thing: "Multiple Time Series with the Same Parameter"
+        thing: "Multiple time series with the same parameter"
       - status: Done
-        thing: "Toggling the Median"
+        thing: "Toggling the median"
       - status: Done
-        thing: "Monitoring Location Cameras"
+        thing: "Monitoring location cameras"
       - status: Done
-        thing: "NLDI on the Cloud"
+        thing: "NLDI on the cloud"
       - status: Done
-        thing: "Brush on Hydrograph"
+        thing: "Brush on hydrograph"
       - status: Done
-        thing: "Brush Handles"
+        thing: "Brush handles"
       - status: Done
-        thing: "Repositories Page"
+        thing: "Repositories page"
       - status: Done
-        thing: "Collapsible Legend on NLDI Maps"
+        thing: "Collapsible legend on NLDI maps"
       - status: Done
-        thing: "Save State of Hydrograph"
+        thing: "Save state of hydrograph"
       - status: Done
-        thing: "Use NLDI to Show Upstream Basin"
+        thing: "Use NLDI to show upstream basin"
       - status: Done
-        thing: "Add User Parameters to Graph-images Service"
-      - status: Done
-        thing: "Image Export"
-      - status: Done
-        thing: "Parameter Period of Record"
-      - status: Done
-        thing: "Networks Pages"
-      - status: On Deck
-        thing: "Upstream basin"
+        thing: "Parameter period of record"
+
   -
     name: "Stakeholder Outreach"
     status: "In Progress"
@@ -61,40 +54,69 @@ categories:
         thing: "NWIS Annual Survey"
        -
         status: Done
-        thing: "NWISweb User Research (18F Phase I)"
+        thing: "NWISweb user research (18F Phase I)"
        -
         status: In Progress
-        thing: "WDFN User Testing (18F Phase II)"
+        thing: "WDFN user testing (18F Phase II)"
   -
-    name: "Data Delivery Services"
+    name: "Next-generation data delivery services"
     status: "In Progress"
     things:
        -
         status: Done
-        thing: "MVP of Daily Values Data Service"
-       -
-        status: In Progress
-        thing: "MVP of Discrete GroundWater Levels Data Service"
+        thing: "MVP of daily values data service"
+       - thing: MVP of hydrograph image service
+         status: done
+       - thing: Experiment with OGC API - Features
+         status: done
+       - thing: USGS-Specific implemetation of OGC API - Features
+         status: done
+       - status: In Progress
+         thing: "MVP of discrete groundwater levels data service"
        -
         status: On Deck
-        thing: "MVP of Instantaneous Data Service"
+        thing: "MVP of next generation instantaneous data service"
        -
         status: Upcoming
-        thing: "Daily Values Data Service (all data)"
+        thing: "Next-generation daily values data service (all data)"
 
   -
-    name: "Networks of related locations"
+    name: "Next-generation networks service and networks pages"
     status: "in progress"
     things:
       -
         thing: "Network data management"
         status: in progress
-  -
-    name: "Next generation observation services"
-    status: "in progress"
+      - thing: "Add network metadata to OGC API"
+        status: in progress
+      - status: on deck
+        thing: "Put network metadata on Network pages"
+      - status: Done
+        thing: "MVP of network pages"
+      - status: Done
+        thing: "MVP network metadata management and services"
+
+
+
+
 
 # reach goals are simpler, just a single phrase or sentence to describe a thing that we may do.  If it really becomes a
 # thing we will do, it gets promoted to categories and is broken down as neccessary
 reach_goals:
-  - Prototype Alert Service
+  - Prototype next generation Alert Service
   - Search and Filter Prototype (18F Phase II, deployed to demo space)
+
+out_years:
+  - Next-gen monitoring location service
+  - Next-gen current conditions maps
+  - Next-gen monitoring location summary service
+  - Next-gen instantaneous values service
+  - Next-gen best available time series service
+  - Next-gen WaterAlert notification system
+  - Next-gen current conditions services
+  - Time series statistics services
+  - Next-gen custom networks service for public users
+  - Discrete water quality data services
+  - Next-gen daily values services for all data
+  - Next-generation discrete water use data services
+  - Next-generation time series statistics service
