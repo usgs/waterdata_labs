@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ .Content }}
-<h2>2020 Roadmap</h2>
+<h2>October 2019- September 2020 Roadmap</h2>
 
 <div class="maxw-tablet">
   <ul class="site-roadmap-list">
@@ -26,4 +26,24 @@
     {{ end }}
   </ul>
 </div>
+
+<h3>October 2020- September 2021 goals</h3>
+<div class="maxw-tablet">
+  <ul class="site-roadmap-list__sublist">
+    {{ range $.Site.Data.roadmap.roadmap.next_year}}
+      <li class="site-roadmap-list__item"><span class="flex-fill">{{ . }}</span></li>
+    {{ end }}
+  </ul>
+</div>
+
+
+<h3>October 2021- September 2022 goals</h3>
+<div class="maxw-tablet">
+  <ul class="site-roadmap-list__sublist">
+    {{ range $.Site.Data.roadmap.roadmap.future_years}}
+      <li class="site-roadmap-list__item"><span class="flex-fill">{{ . }}</span></li>
+    {{ end }}
+  </ul>
+</div>
+
 {{ end }}
