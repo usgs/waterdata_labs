@@ -109,18 +109,18 @@ reach_goals:
   - Search and Filter Prototype (18F Phase II, deployed to demo space)
 
 next_year:
+  - Next-generation WaterAlert notification system
   - Next-generation monitoring location service
   - Next-generation current conditions maps
   - Next-generation monitoring location summary service
   - Next-generation instantaneous values service
   - Next-generation best available time series service
+  - Next-generation daily values services for all data
 
 future_years:
-  - Next-generation WaterAlert notification system
   - Next-generation current conditions services
   - Time series statistics services
   - Next-generation custom networks service for public users
   - Discrete water quality data services
-  - Next-generation daily values services for all data
   - Next-generation discrete water use data services
   - Next-generation time series statistics service
