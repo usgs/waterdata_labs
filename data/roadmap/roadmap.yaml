@@ -5,7 +5,7 @@ categories:
   - 
     name: "Next-generation landing pages with improved user navigation"
     status: "in progress"
-    things: 
+    things:
       - 
         thing: "Brush on hydrograph"
         status: done
@@ -88,6 +88,8 @@ categories:
         thing: "Network data management"
         status: in progress
       - thing: "Add network metadata to OGC API"
+        status: in progress
+      - thing: Link to network page from monitoring location pages
         status: in progress
       - status: on deck
         thing: "Put network metadata on Network pages"
