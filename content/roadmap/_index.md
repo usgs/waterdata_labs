@@ -2,7 +2,7 @@
 date: 2020-7-01
 slug: roadmap
 title: Water Data for the Nation Roadmap
-description: Roadmap for new features
+description: A long-term plan of the goals, features, and long-term direction of of the Water Data for the Nation team.
 keywords:
   - Development
   - Communication
