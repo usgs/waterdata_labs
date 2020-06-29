@@ -20,10 +20,44 @@
     with questions or comments. The code behind this site and the applications
     can be found on Github, <a href="https://github.com/topics/usgs-waterdata-labs">tagged
       with usgs-waterdata-labs</a>.  Pull requests and new issues are always welcome!</p>
-  <ul>
-      <li><p><h3><a href="./estimated-availability/#/">National Integrated Water Availability Assessments-Concept Map</a></h3></p></li>
+
+
+  <ul class="usa-card-group">
+    <li class="tablet:grid-col-4 usa-card">
+        <div class="usa-card__container">
+          <header class="usa-card__header">
+            <a href="./estimated-availability/#/"><h2 class="usa-card__heading">National Integrated Water Availability Assessments-Concept Map</h2></a>
+          </header>
+          <div class="usa-card__media usa-card__media--inset">
+            <div class="usa-card__img">
+              <img src="./static/water-availability/water-availability.png" alt="A placeholder image">
+            </div>
+          </div>
+          <div class="usa-card__body">
+            <p>A demonstration map that shows the latest available daily estimates of natural water storage for approximately 110,000 regions across the lower forty-eight states</p>
+          </div>
+        </div>
+      </li>
     {{ range $key, $value := .Paginator.Pages }}
-      <li><p><h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3></p></li>
+      <li class="tablet:grid-col-4 usa-card">
+        <div class="usa-card__container">
+          <header class="usa-card__header">
+            <a href="{{ .Permalink }}"><h2 class="usa-card__heading">{{ .Title }}</h2></a>
+          </header>
+           <div class="usa-card__media usa-card__media--inset">
+            <div class="usa-card__img">
+              <img src="{{ .Params.thumbnail_path }}" alt="{{ .Params.thumbnail_alt }}">
+            </div>
+          </div>
+          <div class="usa-card__body">
+            <p>{{ .Description }}</p>
+          </div>
+        </div>
+      </li>
     {{ end }}
   </ul>
+
+
+
+
 {{ end }}
