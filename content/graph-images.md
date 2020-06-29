@@ -1,4 +1,5 @@
 ---
+date: 2020-03-14
 slug: about-graph-image-api
 title: Graph Image API
 description: The graph image API allows users to download an image version of the new dynamic hydrograph that is on the next generation monitoring location pages.
