@@ -2,7 +2,9 @@
 date: 2020-01-14
 slug: about-nldi
 title: Hydro-Network Linked Data Index
-description: Information about the Hydro-Network Linked Data Index.
+description: The Hydro Network Linked Data Index (NLDI) puts a restful application programming interface (API) in front of the National Hydrolography dataset. Now, instead of needing to be a GIS professional, any web developer can build tools against the core data in the NHD in a scalable, workable way.
+thumbnail_path: "./static/nldi/nldi_tar_river_thumb.png"
+thumbnail_alt: "thumbnail showing the upstream basin of a location the the tar river as a grey outline overlaid on a map, with and upstream flowline as dark blue, and a downstream flowline as light blue."
 keywords:
   - Hydro-Network
   - Data Index
@@ -32,7 +34,7 @@ Try it out and [contact us](https://water.usgs.gov/contact/gsanswers?pemail=gs-w
 What is the Network-Linked Data Index?
 --------------------------------------
 
-The Network-Linked Data Index (NLDI) is a system that can index spatial and river network-linked data and navigate the river network to allow discovery of indexed information.
+The hydro Network-Linked Data Index (NLDI) is a system that can index spatial and river network-linked data and navigate the river network to allow discovery of indexed information.
 
 Four components make up the system:
 

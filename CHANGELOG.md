@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# 29-June-2020
+### Added
+- Development roadmap
+
+### Changed
+- Created USWDS Cards for the Homepage
+
 # 12-May-2020
 ### Changed
 - Updated to use build guidance from USWDS version 2.6.0 and use wdfn-viz 1.5.0
