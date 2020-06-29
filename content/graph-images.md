@@ -1,7 +1,7 @@
 ---
 slug: about-graph-image-api
 title: Graph Image API
-description: The graph image API allows users to download an image version of the modern .
+description: The graph image API allows users to download an image version of the new dynamic hydrograph that is on the next generation monitoring location pages.
 thumbnail_path: "https://labs.waterdata.usgs.gov/api/graph-images/monitoring-location/09380000/?parameterCode=00060&width=300&period=P7D"
 thumbnail_alt: "A line graph showing 7 days of hydrological data.  The line is orange, with black axes"
 keywords:
