@@ -2,67 +2,6 @@
 # allowed "status" values: "upcoming", "on deck", "in progress", "done"
 
 categories:
-  - 
-    name: "Next-generation monitoring location pages"
-    status: "in progress"
-    things:
-      - 
-        thing: "Groundwater daily value hydrograph"
-        status: in progress
-      - thing: "Brush on hydrograph"
-        status: done
-      - status: Done
-        thing: "Celsius and fahrenheit degrees on temperature scales"
-      - status: Done
-        thing: "Refine axis scaling"
-      - status: Done
-        thing: "Multiple time series with the same parameter"
-      - status: Done
-        thing: "Toggling the median"
-      - status: Done
-        thing: "Monitoring location cameras"
-      - status: Done
-        thing: "NLDI on the cloud"
-      - status: Done
-        thing: "Brush on hydrograph"
-      - status: Done
-        thing: "Brush handles"
-      - status: Done
-        thing: "Repositories page"
-      - status: Done
-        thing: "Collapsible legend on NLDI maps"
-      - status: Done
-        thing: "Save state of hydrograph"
-      - status: Done
-        thing: "Use NLDI to show upstream basin"
-      - status: Done
-        thing: "Parameter period of record"
-
-  -
-    name: "Next-generation landing pages with improved user navigation"
-    status: "in progress"
-    things:
-      -
-        thing: "Something about experimentation"
-        status: in progress
-
-
-  -
-    name: "Stakeholder Outreach"
-    status: "In Progress"
-    things:
-       -
-        status: In Progress
-        thing: "Water quality outreach and listening sessions"
-       -
-        status: In Progress
-        thing: "NWIS Annual Survey, release for public on July 20, 2020"
-       -
-        status: Done
-        thing: "NWISweb user research (18F Phase I)"
-       -
-        status: In Progress
-        thing: "WDFN user testing (18F Phase II)"
 
   -
     name: "Next-generation data delivery services"
@@ -82,6 +21,49 @@ categories:
       - thing: MVP USGS-Specific implemetation of OGC API - Features
         status: done
 
+  -
+    name: "Next-generation landing pages with improved user navigation"
+    status: "in progress"
+    things:
+      -
+        thing: "Something about experimentation"
+        status: in progress
+
+
+
+  -
+    name: "Next-generation monitoring location pages"
+    status: "in progress"
+    things:
+      - 
+        thing: "Groundwater daily value hydrograph"
+        status: in progress
+      - thing: "Brush on hydrograph"
+        status: done
+      - status: Done
+        thing: "Celsius and fahrenheit degrees on temperature scales"
+      - status: Done
+        thing: "Refine axis scaling"
+      - status: Done
+        thing: "Multiple time series with the same parameter"
+      - status: Done
+        thing: "Toggling the median"
+      - status: Done
+        thing: "Monitoring location cameras prototype"
+      - status: Done
+        thing: "[NLDI](https://labs.waterdata.usgs.gov/about-nldi/index.html) on the cloud"
+      - status: Done
+        thing: "Brush on hydrograph"
+      - status: Done
+        thing: "Brush handles"
+      - status: Done
+        thing: "Repositories page"
+      - status: Done
+        thing: "Save state of hydrograph"
+      - status: Done
+        thing: "Use [NLDI](https://labs.waterdata.usgs.gov/about-nldi/index.html) to show upstream basin and upstream and downstream monitoring locations"
+      - status: Done
+        thing: "Parameter period of record"
 
 
   -
@@ -101,6 +83,29 @@ categories:
         thing: "MVP of network pages"
       - status: Done
         thing: "MVP network metadata management and services"
+
+  -
+    name: "Stakeholder Outreach"
+    status: "In Progress"
+    things:
+       -
+        status: In Progress
+        thing: "Water quality outreach and listening sessions"
+       -
+        status: In Progress
+        thing: "NWIS Annual Survey, release for public on July 20, 2020"
+       -
+        status: Done
+        thing: "NWISweb user research (18F Phase I)"
+       -
+        status: In Progress
+        thing: "WDFN user testing (18F Phase II)"
+
+
+
+
+
+
 
 
 
