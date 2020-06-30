@@ -23,14 +23,33 @@ categories:
 
   -
     name: "Next-generation landing pages with improved user navigation"
-    status: "in progress"
+    status: "In Progress"
     things:
       -
-        thing: "Something about experimentation"
-        status: in progress
-
-
-
+        thing: "18F Phase I: Kickoff & Discovery"
+        status: Done
+      -
+        thing: "18F Phase I: User Research"
+        status: Done
+      -
+        thing: "18F Phase I: Synthesis & prioritization"
+        status: Done
+      -
+        thing: "18F Phase I: Roadmap & Low-fidelity prototyping"
+        status: Done
+      -
+        thing: "18F Phase II: Planning"
+        status: Done
+      -
+        thing: "18F Phase II: Prototype"
+        status: In progress
+      -
+        thing: "18F Phase II: Iterate"
+        status: In progress
+      -
+        thing: "18F Phase II: Transition & Handoff"
+        status: On deck
+        
   -
     name: "Next-generation monitoring location pages"
     status: "in progress"
