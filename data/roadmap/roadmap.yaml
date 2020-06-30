@@ -64,7 +64,9 @@ categories:
     name: "Next-generation monitoring location pages"
     status: "in progress"
     things:
-      - 
+      - thing: "Compile user feedback and prioritize new features and usability improvements"
+        status: in progress
+      -
         thing: "Groundwater daily value hydrograph"
         status: in progress
       - thing: "Brush on hydrograph"
