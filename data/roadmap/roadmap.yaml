@@ -2,7 +2,36 @@
 # allowed "status" values: "upcoming", "on deck", "in progress", "done"
 
 categories:
-  - 
+
+  -
+    name: "Next-generation data delivery services"
+    status: "In Progress"
+    things:
+      -
+        status: In Progress
+        thing: "MVP of discrete groundwater levels data service"
+      - status: On Deck
+        thing: "MVP of next generation instantaneous data service"
+      - status: Done
+        thing: "MVP of daily values data service"
+      - thing: MVP of hydrograph image service
+        status: done
+      - thing: Experiment with OGC API - Features
+        status: done
+      - thing: MVP USGS-Specific implemetation of OGC API - Features
+        status: done
+
+  -
+    name: "Next-generation landing pages with improved user navigation"
+    status: "in progress"
+    things:
+      -
+        thing: "Something about experimentation"
+        status: in progress
+
+
+
+  -
     name: "Next-generation monitoring location pages"
     status: "in progress"
     things:
@@ -38,51 +67,6 @@ categories:
       - status: Done
         thing: "Parameter period of record"
 
-  -
-    name: "Next-generation landing pages with improved user navigation"
-    status: "in progress"
-    things:
-      -
-        thing: "Something about experimentation"
-        status: in progress
-
-
-  -
-    name: "Stakeholder Outreach"
-    status: "In Progress"
-    things:
-       -
-        status: In Progress
-        thing: "Water quality outreach and listening sessions"
-       -
-        status: In Progress
-        thing: "NWIS Annual Survey, release for public on July 20, 2020"
-       -
-        status: Done
-        thing: "NWISweb user research (18F Phase I)"
-       -
-        status: In Progress
-        thing: "WDFN user testing (18F Phase II)"
-
-  -
-    name: "Next-generation data delivery services"
-    status: "In Progress"
-    things:
-      -
-        status: In Progress
-        thing: "MVP of discrete groundwater levels data service"
-      - status: On Deck
-        thing: "MVP of next generation instantaneous data service"
-      - status: Done
-        thing: "MVP of daily values data service"
-      - thing: MVP of hydrograph image service
-        status: done
-      - thing: Experiment with OGC API - Features
-        status: done
-      - thing: MVP USGS-Specific implemetation of OGC API - Features
-        status: done
-
-
 
   -
     name: "Next-generation networks service and networks pages"
@@ -101,6 +85,29 @@ categories:
         thing: "MVP of network pages"
       - status: Done
         thing: "MVP network metadata management and services"
+
+  -
+    name: "Stakeholder Outreach"
+    status: "In Progress"
+    things:
+       -
+        status: In Progress
+        thing: "Water quality outreach and listening sessions"
+       -
+        status: In Progress
+        thing: "NWIS Annual Survey, release for public on July 20, 2020"
+       -
+        status: Done
+        thing: "NWISweb user research (18F Phase I)"
+       -
+        status: In Progress
+        thing: "WDFN user testing (18F Phase II)"
+
+
+
+
+
+
 
 
 
