@@ -51,7 +51,7 @@ categories:
       - status: Done
         thing: "Monitoring location cameras"
       - status: Done
-        thing: "NLDI on the cloud"
+        thing: "[NLDI](https://labs.waterdata.usgs.gov/about-nldi/index.html) on the cloud"
       - status: Done
         thing: "Brush on hydrograph"
       - status: Done
@@ -59,11 +59,9 @@ categories:
       - status: Done
         thing: "Repositories page"
       - status: Done
-        thing: "Collapsible legend on NLDI maps"
-      - status: Done
         thing: "Save state of hydrograph"
       - status: Done
-        thing: "Use NLDI to show upstream basin"
+        thing: "Use [NLDI](https://labs.waterdata.usgs.gov/about-nldi/index.html) to show upstream basin and upstream and downstream monitoring locations"
       - status: Done
         thing: "Parameter period of record"
 
