@@ -3,7 +3,7 @@
 
 categories:
   - 
-    name: "Next-generation landing pages with improved user navigation"
+    name: "Next-generation monitoring location pages"
     status: "in progress"
     things:
       - 
@@ -37,6 +37,15 @@ categories:
         thing: "Use NLDI to show upstream basin"
       - status: Done
         thing: "Parameter period of record"
+
+  -
+    name: "Next-generation landing pages with improved user navigation"
+    status: "in progress"
+    things:
+      -
+        thing: "Something about experimentation"
+        status: in progress
+
 
   -
     name: "Stakeholder Outreach"
