@@ -58,7 +58,7 @@ See the swagger documentation here: [https://labs.waterdata.usgs.gov/api/nldi/sw
 *   A query to the [base of the linked-data NLDI services](https://labs.waterdata.usgs.gov/api/nldi/linked-data) returns the identifier types that are available as navigation starting points.
 *   A query for an identifier type and identifier from that source returns the navigation options available from that starting point.
 *   A query to navigate with one of the options returns the response types available for that navigation mode
-*   A fully qualified query returns a GeoJSON representation of the resource and may include other optional representations in the future.
+*   A fully qualified query returns a GeoJSON representation of the resource in WGS84 lat/lon and may include other optional representations in the future.
 
 How is the NLDI being developed?
 -------------------------------------------
@@ -92,4 +92,4 @@ An additional function that is available on NLDI is basin boundaries. If we add 
 How to contribute network-linked content
 ----------------------------------------
 
-Content to be added to the NLDI needs to be available as a shapefile, which can be served to the NLDI crawler via [https://sciencebase.gov](https://sciencebase.gov/), or as a web-accessible file containing GeoJSON points. Required attributes include: 1) an ID suitable for use in a URL, 2) a descriptive name, and 3) a URL that can be used to access information about each feature. The url is not explicitly required but is strongly recommended. Given this information, the NLDI crawler code will match each point to an NHDPlus catchment and the data will be available via NLDI search services. Contact [dblodgett@usgs.gov](mailto:dblodgett@usgs.gov) to coordinate addition of data sources.
+Content to be added to the NLDI needs to be available as a shapefile, which can be served to the NLDI crawler via [https://sciencebase.gov](https://sciencebase.gov/), or as a web-accessible file containing WGS84 lat/lon GeoJSON points. Required attributes include: 1) an ID suitable for use in a URL, 2) a descriptive name, and 3) a URL that can be used to access information about each feature. The url is not explicitly required but is strongly recommended. Given this information, the NLDI crawler code will match each point to an NHDPlus catchment and the data will be available via NLDI search services. Contact [dblodgett@usgs.gov](mailto:dblodgett@usgs.gov) to coordinate addition of data sources.
