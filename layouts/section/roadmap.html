@@ -1,50 +1,52 @@
 {{ define "main" }}
-{{ .Content }}
+<div class="container_content">
+  {{ .Content }}
 
-<h2>October 2019- September 2020 Roadmap</h2>
 
-<div class="maxw-tablet">
-  <ul class="site-roadmap-list">
-    {{ range $.Site.Data.roadmap.roadmap.categories}}
-    <li class="site-roadmap-list__item"><span class="flex-fill">{{ .name | markdownify }}</span> <span class="usa-tag label-{{ .status | urlize | lower }} flex-auto">{{ .status }}</span>
-      {{ if .things }}
-      <ul class="site-roadmap-list__sublist">
-        {{ range .things}}
-            <li class="site-roadmap-list__item"><span class="flex-fill">{{ .thing | markdownify }}</span> <span class="usa-tag label-{{ .status | urlize  | lower }}">{{ .status }}</span></li>
+  <h2>October 2019- September 2020 Roadmap</h2>
+
+  <div class="maxw-tablet">
+    <ul class="site-roadmap-list">
+      {{ range $.Site.Data.roadmap.roadmap.categories}}
+      <li class="site-roadmap-list__item"><span class="flex-fill">{{ .name | markdownify }}</span> <span class="usa-tag label-{{ .status | urlize | lower }} flex-auto">{{ .status }}</span>
+        {{ if .things }}
+        <ul class="site-roadmap-list__sublist">
+          {{ range .things}}
+              <li class="site-roadmap-list__item"><span class="flex-fill">{{ .thing | markdownify }}</span> <span class="usa-tag label-{{ .status | urlize  | lower }}">{{ .status }}</span></li>
+          {{ end }}
+        </ul>
         {{ end }}
-      </ul>
+      </li>
       {{ end }}
-    </li>
-    {{ end }}
-  </ul>
+    </ul>
+  </div>
+
+  <h3>Reach goals</h3>
+  <div class="maxw-tablet">
+    <ul class="site-roadmap-list__sublist">
+      {{ range $.Site.Data.roadmap.roadmap.reach_goals}}
+        <li class="site-roadmap-list__item"><span class="flex-fill">{{ . | markdownify }}</span></li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <h2>October 2020- September 2021 goals</h2>
+  <div class="maxw-tablet">
+    <ul class="site-roadmap-list__sublist">
+      {{ range $.Site.Data.roadmap.roadmap.next_year}}
+        <li class="site-roadmap-list__item"><span class="flex-fill">{{ . | markdownify }}</span></li>
+      {{ end }}
+    </ul>
+  </div>
+
+
+  <h2>October 2021- September 2022 goals</h2>
+  <div class="maxw-tablet">
+    <ul class="site-roadmap-list__sublist">
+      {{ range $.Site.Data.roadmap.roadmap.future_years}}
+        <li class="site-roadmap-list__item"><span class="flex-fill">{{ . | markdownify }}</span></li>
+      {{ end }}
+    </ul>
+  </div>
 </div>
-
-<h3>Reach goals</h3>
-<div class="maxw-tablet">
-  <ul class="site-roadmap-list__sublist">
-    {{ range $.Site.Data.roadmap.roadmap.reach_goals}}
-      <li class="site-roadmap-list__item"><span class="flex-fill">{{ . | markdownify }}</span></li>
-    {{ end }}
-  </ul>
-</div>
-
-<h2>October 2020- September 2021 goals</h2>
-<div class="maxw-tablet">
-  <ul class="site-roadmap-list__sublist">
-    {{ range $.Site.Data.roadmap.roadmap.next_year}}
-      <li class="site-roadmap-list__item"><span class="flex-fill">{{ . | markdownify }}</span></li>
-    {{ end }}
-  </ul>
-</div>
-
-
-<h2>October 2021- September 2022 goals</h2>
-<div class="maxw-tablet">
-  <ul class="site-roadmap-list__sublist">
-    {{ range $.Site.Data.roadmap.roadmap.future_years}}
-      <li class="site-roadmap-list__item"><span class="flex-fill">{{ . | markdownify }}</span></li>
-    {{ end }}
-  </ul>
-</div>
-
 {{ end }}
