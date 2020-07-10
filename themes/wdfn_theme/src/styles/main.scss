@@ -124,5 +124,7 @@ pre {
    @include u-width('full');
    @include u-padding-x($theme-site-margins-width);
    max-width: none;
+  height: 1200px;
+  overflow:scroll;
 }
 
