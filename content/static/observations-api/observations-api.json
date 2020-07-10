@@ -1,0 +1,1164 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "WDFN Observations Services API",
+    "description": "Documentation for the Water Data for the Nation - Observations Services API.",
+    "version": "0.6.0"
+  },
+  "servers": [
+    {
+      "url": "https://labs.waterdata.usgs.gov/api/observations/"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Observations - OGC api",
+      "description": "Feature Collections based on the new OGCAPI-Features"
+    },
+    {
+      "name": "Statistical Observations Datasets",
+      "description": "Feature Statistical Time Series Observations, such as min, max, or median."
+    },
+    {
+      "name": "Application Version",
+      "description": "Display"
+    }
+  ],
+  "paths": {
+    "/collections/{collectionId}/items/{featureId}/observations": {
+      "get": {
+        "tags": [
+          "Statistical Observations Datasets"
+        ],
+        "description": "Return data sets available at the monitoring location.",
+        "operationId": "getObservationTypes",
+        "parameters": [
+          {
+            "name": "f",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "json"
+            }
+          },
+          {
+            "name": "collectionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "featureId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "available datasets.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObservationsJSON"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The requested data was not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OgcException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OgcException"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collections": {
+      "get": {
+        "tags": [
+          "Observations - OGC api"
+        ],
+        "description": "Return JSON representation of the collections of monitoring locations at the USGS",
+        "externalDocs": {
+          "url": "http://docs.opengeospatial.org/is/17-069r3/17-069r3.html#_collections_"
+        },
+        "operationId": "getOgcCollections",
+        "parameters": [
+          {
+            "name": "f",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "GeoJSON representation of the Collections.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CollectionsGeoJSON"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OgcException"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collectionId}": {
+      "get": {
+        "tags": [
+          "Observations - OGC api"
+        ],
+        "description": "Return GeoJSON Data specific to the requested Collection.",
+        "externalDocs": {
+          "url": "http://docs.opengeospatial.org/is/17-069r3/17-069r3.html#_collection_"
+        },
+        "operationId": "getOgcCollection",
+        "parameters": [
+          {
+            "name": "f",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "json"
+            }
+          },
+          {
+            "name": "collectionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "GeoJSON representation of the Collection.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CollectionGeoJSON"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The requested data was not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OgcException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OgcException"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collectionId}/items": {
+      "get": {
+        "tags": [
+          "Observations - OGC api"
+        ],
+        "description": "Return GeoJSON Data specific to the features in the requested Collection.",
+        "externalDocs": {
+          "url": "http://docs.opengeospatial.org/is/17-069r3/17-069r3.html#_feature_"
+        },
+        "operationId": "getOgcCollectionFeatures",
+        "parameters": [
+          {
+            "name": "f",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "json"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32",
+              "default": 10000
+            }
+          },
+          {
+            "name": "startIndex",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "minimum": 0,
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          },
+          {
+            "name": "bbox",
+            "in": "query",
+            "description": "Bounding box: minimum longitude, minimum latitude, maximum longitude, maximum latitude<br>bbox=-109.046667,37.0,-102.046667,39.0 limits results to monitoring sites in Colorado.",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "collectionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "GeoJSON representation of the Feature Collection.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FeatureCollectionGeoJSON"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A query parameter has an invalid value.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OgcException"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The requested data was not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OgcException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OgcException"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collectionId}/items/{featureId}": {
+      "get": {
+        "tags": [
+          "Observations - OGC api"
+        ],
+        "description": "Return GeoJSON Data specific to the requested Collection Feature.",
+        "externalDocs": {
+          "url": "http://docs.opengeospatial.org/is/17-069r3/17-069r3.html#_feature_"
+        },
+        "operationId": "getOgcCollectionFeature",
+        "parameters": [
+          {
+            "name": "f",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "json"
+            }
+          },
+          {
+            "name": "collectionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "featureId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "GeoJSON representation of the Feature.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FeatureGeoJSON"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The requested data was not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OgcException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OgcException"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collectionId}/items/{featureId}/observations/statistical-time-series": {
+      "get": {
+        "tags": [
+          "Statistical Observations Datasets"
+        ],
+        "description": "Return JSON Data list of statistical time series available for the requested Monitoring Location.",
+        "externalDocs": {
+          "url": "https://github.com/opengeospatial/omsf-profile/tree/master/omsf-json"
+        },
+        "operationId": "getTimeSeries",
+        "parameters": [
+          {
+            "name": "collectionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "featureId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "GeoJSON representation of the Statistical Time Series list.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatisticalFeatureGeoJSON"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The requested data was not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OgcException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OgcException"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collectionId}/items/{featureId}/observations/statistical-time-series/{timeSeriesId}": {
+      "get": {
+        "tags": [
+          "Statistical Observations Datasets"
+        ],
+        "description": "Return GeoJSON Data specific to the requested Monitoring Location and Time Series.",
+        "externalDocs": {
+          "url": "https://github.com/opengeospatial/omsf-profile/tree/master/omsf-json"
+        },
+        "operationId": "getTimeSeries_1",
+        "parameters": [
+          {
+            "name": "collectionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "featureId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "timeSeriesId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "GeoJSON representation of the Time Series.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TimeSeriesGeoJSON"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The requested data was not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OgcException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OgcException"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/version": {
+      "get": {
+        "tags": [
+          "Application Version"
+        ],
+        "description": "Return the web service version information.",
+        "operationId": "getVersion",
+        "responses": {
+          "default": {
+            "description": "default response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Version"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Geometry": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this Geometry object - Currently only 'Point' (longitude, latitude) objects are produced.",
+            "example": "Point"
+          },
+          "coordinates": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "description": "A Geometry object represents points, curves, and surfaces in coordinate space."
+      },
+      "MonitoringLocationGeoJSON": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this object - Currently only 'Feature' objects are produced.",
+            "example": "Feature"
+          },
+          "id": {
+            "type": "string",
+            "description": "Monitoring Location Identification Number.",
+            "example": "USGS-07227448"
+          },
+          "geometry": {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          "properties": {
+            "$ref": "#/components/schemas/Properties"
+          }
+        },
+        "description": "Monitoring Location MetaData in GeoJSON format."
+      },
+      "Properties": {
+        "type": "object",
+        "properties": {
+          "samplingFeatureName": {
+            "type": "string",
+            "description": "The name of the Monitoring Location.",
+            "example": "Punta De Agua Ck nr Channing, TX"
+          }
+        },
+        "description": "Additional properties."
+      },
+      "ObservationTypeJSON": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "observation dataset name",
+            "example": "statistical-time-series"
+          },
+          "url": {
+            "type": "string",
+            "description": "Href link to the dataset."
+          }
+        },
+        "description": "Observation dataset in JSON format."
+      },
+      "ObservationsJSON": {
+        "type": "object",
+        "properties": {
+          "observationTypes": {
+            "type": "array",
+            "description": "available dataSets",
+            "items": {
+              "$ref": "#/components/schemas/ObservationTypeJSON"
+            }
+          }
+        },
+        "description": "Observation datasets in JSON format."
+      },
+      "OgcException": {
+        "required": [
+          "code"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "CollectionGeoJSON": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Collection Identifier.",
+            "example": "monitoring-locations"
+          },
+          "itemType": {
+            "type": "string",
+            "description": "The type of items in this collection - Currently only 'Feature' objects are produced.",
+            "example": "Feature"
+          },
+          "title": {
+            "type": "string",
+            "description": "human readable title of the collection.",
+            "example": "NWIS Monitoring Locations"
+          },
+          "description": {
+            "type": "string",
+            "description": "a description of the features in the collection.",
+            "example": "USGS water monitoring locations managed in the National Water Information System"
+          },
+          "keywords": {
+            "type": "array",
+            "description": "informative words describing the collection content or subject area.",
+            "items": {
+              "type": "string",
+              "description": "informative words describing the collection content or subject area."
+            }
+          },
+          "extent": {
+            "$ref": "#/components/schemas/ExtentGeoJSON"
+          },
+          "links": {
+            "type": "array",
+            "description": "The links specified in the collection.",
+            "items": {
+              "$ref": "#/components/schemas/LinkGeoJSON"
+            }
+          }
+        },
+        "description": "Collection MetaData in GeoJSON format."
+      },
+      "CollectionsGeoJSON": {
+        "type": "object",
+        "properties": {
+          "collections": {
+            "type": "array",
+            "description": "List of collections available.",
+            "items": {
+              "$ref": "#/components/schemas/CollectionGeoJSON"
+            }
+          },
+          "links": {
+            "type": "array",
+            "description": "Reference links for this collection.",
+            "items": {
+              "$ref": "#/components/schemas/LinkGeoJSON"
+            }
+          }
+        },
+        "description": "Collections MetaData in GeoJSON format."
+      },
+      "ExtentGeoJSON": {
+        "type": "object",
+        "properties": {
+          "spatial": {
+            "$ref": "#/components/schemas/SpatialGeoJSON"
+          }
+        },
+        "description": "The extent of the features in the collection. Only spatial extents are specified."
+      },
+      "LinkGeoJSON": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The media type referenced url produces.",
+            "example": "text/html"
+          },
+          "rel": {
+            "type": "string",
+            "description": "The relationship of the url to referencing object.",
+            "example": "canonical"
+          },
+          "title": {
+            "type": "string",
+            "description": "human readable title describing this Link.",
+            "example": "information"
+          },
+          "href": {
+            "type": "string",
+            "description": "The url specified in this Link.",
+            "example": "https://waterdata.usgs.gov"
+          }
+        },
+        "description": "Reference links for this feature collection."
+      },
+      "SpatialGeoJSON": {
+        "type": "object",
+        "properties": {
+          "bbox": {
+            "type": "array",
+            "description": "A bounding box that describes the spatial extent of the dataset.",
+            "example": [
+              -180,
+              -90,
+              180,
+              90
+            ],
+            "items": {
+              "type": "number",
+              "description": "A bounding box that describes the spatial extent of the dataset.",
+              "format": "double"
+            }
+          },
+          "crs": {
+            "type": "string",
+            "description": "Coordinate reference system of the coordinates in the spatial extent (property `bbox`)",
+            "example": "http://www.opengis.net/def/crs/OGC/1.3/CRS83"
+          }
+        },
+        "description": "The spatial extent of the features in the collection."
+      },
+      "FeatureCollectionGeoJSON": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The GeoJSON type (FeatureCollection) represented by this schema.",
+            "example": "FeatureCollection"
+          },
+          "features": {
+            "type": "array",
+            "description": "List of features.",
+            "items": {
+              "$ref": "#/components/schemas/FeatureGeoJSON"
+            }
+          },
+          "links": {
+            "type": "array",
+            "description": "Reference links for this feature collection.",
+            "items": {
+              "$ref": "#/components/schemas/LinkGeoJSON"
+            }
+          },
+          "timeStamp": {
+            "type": "string",
+            "description": "The time stamp when the response was generated (RFC 3339 format).",
+            "example": "2018-04-03T14:52:23Z"
+          }
+        },
+        "description": "Collection features MetaData in GeoJSON format."
+      },
+      "FeatureGeoJSON": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this object - Currently only 'Feature' objects are produced.",
+            "example": "Feature"
+          },
+          "id": {
+            "type": "string",
+            "description": "Feature Identifier.",
+            "example": "USGS-07227448"
+          },
+          "geometry": {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          "properties": {
+            "$ref": "#/components/schemas/FeatureProperties"
+          }
+        },
+        "description": "Feature MetaData in GeoJSON format."
+      },
+      "FeatureProperties": {
+        "type": "object",
+        "properties": {
+          "agency": {
+            "type": "string",
+            "description": "agency",
+            "example": "U.S. Geological Survey"
+          },
+          "monitoringLocationNumber": {
+            "type": "string",
+            "description": "monitoringLocationNumber",
+            "example": "07227448"
+          },
+          "monitoringLocationName": {
+            "type": "string",
+            "description": "monitoringLocationName",
+            "example": "Punta De Agua Ck nr Channing, TX"
+          },
+          "monitoringLocationType": {
+            "type": "string",
+            "description": "monitoringLocationType",
+            "example": "Steam"
+          },
+          "district": {
+            "type": "string",
+            "description": "district",
+            "example": "Texas"
+          },
+          "state": {
+            "type": "string",
+            "description": "state",
+            "example": "Texas"
+          },
+          "county": {
+            "type": "string",
+            "description": "county",
+            "example": "Texas"
+          },
+          "country": {
+            "type": "string",
+            "description": "country",
+            "example": "US"
+          },
+          "monitoringLocationAltitudeLandSurface": {
+            "type": "string",
+            "description": "monitoringLocationAltitudeLandSurface",
+            "example": "3407"
+          },
+          "altitudeMethod": {
+            "type": "string",
+            "description": "altitudeMethod",
+            "example": "Interpolated from topographic map."
+          },
+          "altitudeDatum": {
+            "type": "string",
+            "description": "altitudeDatum",
+            "example": "National Geodetic Vertical Datum of 1929"
+          },
+          "nationalAquifer": {
+            "type": "string",
+            "description": "nationalAquifer",
+            "example": "Basin and Range carbonate-rock aquifers"
+          },
+          "localAquifer": {
+            "type": "string",
+            "description": "localAquifer",
+            "example": "Eagle Ford Shale"
+          },
+          "localAquiferType": {
+            "type": "string",
+            "description": "localAquiferType",
+            "example": "Confined single aquifer"
+          },
+          "wellDepth": {
+            "type": "string",
+            "description": "wellDepth",
+            "example": "100.13"
+          },
+          "holeDepth": {
+            "type": "string",
+            "description": "holeDepth",
+            "example": "10.0"
+          },
+          "holeDepthSource": {
+            "type": "string",
+            "description": "holeDepthSource",
+            "example": "D"
+          },
+          "agencyCode": {
+            "type": "string",
+            "description": "agencyCode",
+            "example": "USGS"
+          },
+          "districtCode": {
+            "type": "string",
+            "description": "districtCode",
+            "example": "48"
+          },
+          "stateFIPS": {
+            "type": "string",
+            "description": "stateFIPS",
+            "example": "US:48"
+          },
+          "countyFIPS": {
+            "type": "string",
+            "description": "countyFIPS",
+            "example": "US:48:205"
+          },
+          "countryFIPS": {
+            "type": "string",
+            "description": "countryFIPS",
+            "example": "US"
+          },
+          "hydrologicUnit": {
+            "type": "string",
+            "description": "hydrologicUnit",
+            "example": "110901030506"
+          },
+          "monitoringLocationUrl": {
+            "type": "string",
+            "description": "monitoringLocationUrl",
+            "example": "https://waterdata.usgs.gov/monitoring-location/07227448"
+          }
+        },
+        "description": "Feature properties."
+      },
+      "StatisticalFeatureGeoJSON": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this object - Currently only 'Feature' objects are produced.",
+            "example": "Feature"
+          },
+          "id": {
+            "type": "string",
+            "description": "Feature Identifier.",
+            "example": "USGS-07227448"
+          },
+          "geometry": {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          "properties": {
+            "$ref": "#/components/schemas/StatisticalFeatureProperties"
+          },
+          "timesSeries": {
+            "type": "array",
+            "description": "The statistical time series available for this Feature.",
+            "items": {
+              "$ref": "#/components/schemas/StatisticalTimeSeriesItem"
+            }
+          }
+        },
+        "description": "Statistical Time Series Observation datasets available for a feature."
+      },
+      "StatisticalFeatureProperties": {
+        "type": "object",
+        "properties": {
+          "samplingFeatureName": {
+            "type": "string",
+            "description": "The features descriptive name.",
+            "example": "Yahara River at Main St."
+          }
+        },
+        "description": "Statistical Feature properties."
+      },
+      "StatisticalTimeSeriesItem": {
+        "type": "object",
+        "properties": {
+          "parameterCode": {
+            "type": "string",
+            "description": "The five digit parameter unique identifier.",
+            "example": "72019"
+          },
+          "statisticCode": {
+            "type": "string",
+            "description": "The five digit statistic code unique identifier.",
+            "example": "00002"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL to download the statistical time series data."
+          },
+          "description": {
+            "type": "string",
+            "description": "Information about the parameter and statistical codes",
+            "example": "Depth to water level, ft below land surface, daily maximum"
+          },
+          "id": {
+            "type": "string",
+            "description": "The time series unique identifier.",
+            "example": "AGENCY-FEATURE-TIMESERIES"
+          }
+        },
+        "description": "Statistical time series description entry."
+      },
+      "TimeSeriesGeoJSON": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this object - Currently only 'Feature' objects are produced.",
+            "example": "Feature"
+          },
+          "id": {
+            "type": "string",
+            "description": "Monitoring Location Identification Number.",
+            "example": "USGS-425607088173001-{{AQTS Time series GUID}}"
+          },
+          "geometry": {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          "properties": {
+            "$ref": "#/components/schemas/TimeSeriesProperties"
+          }
+        },
+        "description": "Timeseries Data in GeoJSON format."
+      },
+      "TimeSeriesProperties": {
+        "type": "object",
+        "properties": {
+          "observationType": {
+            "type": "string",
+            "description": "The type of this observation - Currently only 'MeasureTimeseriesObservation' objects are produced.",
+            "example": "MeasureTimeseriesObservation"
+          },
+          "phenomenonTimeStart": {
+            "type": "string",
+            "description": "The OMSF phenomenonTime - Begin Date of this time series data.",
+            "format": "date",
+            "example": "2019-11-09"
+          },
+          "phenomenonTimeEnd": {
+            "type": "string",
+            "description": "The OMSF phenomenonTime - End Date of this time series data.",
+            "format": "date",
+            "example": "2019-11-15"
+          },
+          "observedPropertyName": {
+            "type": "string",
+            "description": "The OMSF observedProperty - Property being observed.",
+            "example": "Depth to water level, ft below land surface"
+          },
+          "observedPropertyReference": {
+            "type": "string",
+            "description": "The OMSF observedPropertyReference - A URI pointing to the remote definition of the Property being observed.",
+            "example": "https://waterdata.usgs.gov/nwisweb/rdf?parmCd=72019"
+          },
+          "samplingFeatureName": {
+            "type": "string",
+            "description": "The name of the Monitoring Location.",
+            "example": "Punta De Agua Ck nr Channing, TX"
+          },
+          "statistic": {
+            "type": "string",
+            "description": "The statistic represented in thes time series.",
+            "example": "DAILY MAXIMUM VALUES"
+          },
+          "statisticReference": {
+            "type": "string",
+            "description": " A URI pointing to the remote definition of the statistic represented in thes time series.",
+            "example": "https://waterdata.usgs.gov/nwisweb/rdf?statCd=00001"
+          },
+          "timeStep": {
+            "type": "array",
+            "description": "The OMSF timeStep - An Array of Dates for the individual time series observations.",
+            "items": {
+              "type": "string",
+              "description": "The OMSF timeStep - An Array of Dates for the individual time series observations.",
+              "format": "date"
+            }
+          },
+          "unitOfMeasureName": {
+            "type": "string",
+            "description": "The OMSF result - Name of the Unit of Meassure.",
+            "example": "ft"
+          },
+          "unitOfMeasureReference": {
+            "type": "string",
+            "description": "The OMSF result - A URI pointing to the remote definition of the Unit of Meassure.",
+            "example": "http://www.opengis.net/def/uom/UCUM/ft"
+          },
+          "result": {
+            "type": "array",
+            "description": "The OMSF result - An Array of actual measurements.",
+            "items": {
+              "type": "string",
+              "description": "The OMSF result - An Array of actual measurements."
+            }
+          },
+          "nilReason": {
+            "type": "array",
+            "description": "An Array of reasons a result is masked.",
+            "items": {
+              "type": "string",
+              "description": "An Array of reasons a result is masked."
+            }
+          },
+          "approvals": {
+            "type": "array",
+            "description": "An Array of approval(s) for the result. This is an array of size 1 to many per result",
+            "items": {
+              "type": "string",
+              "description": "An Array of approval(s) for the result. This is an array of size 1 to many per result"
+            }
+          },
+          "qualifiers": {
+            "type": "array",
+            "description": "An Array of qualifiers(s) for the result. This is null or an array of size 1 to many per result",
+            "items": {
+              "type": "string",
+              "description": "An Array of qualifiers(s) for the result. This is null or an array of size 1 to many per result"
+            }
+          },
+          "grades": {
+            "type": "array",
+            "description": "An Array of grade(s) for the result. This is an array of size 1 to many per result",
+            "items": {
+              "type": "string",
+              "description": "An Array of grade(s) for the result. This is an array of size 1 to many per result"
+            }
+          }
+        },
+        "description": "The properties associated with this Monitoring Location."
+      },
+      "Build": {
+        "type": "object",
+        "properties": {
+          "artifact": {
+            "type": "string",
+            "example": "time-series-services"
+          },
+          "name": {
+            "type": "string",
+            "example": "time-series-services"
+          },
+          "time": {
+            "type": "string",
+            "example": "2019-12-03T17:43:14.683Z"
+          },
+          "version": {
+            "type": "string",
+            "example": "0.2.0-SNAPSHOT"
+          },
+          "group": {
+            "type": "string",
+            "example": "gov.usgs.wma.waterdata"
+          }
+        }
+      },
+      "Version": {
+        "type": "object",
+        "properties": {
+          "build": {
+            "$ref": "#/components/schemas/Build"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 ---
 date: 2020-7-01
-slug: api-docs
+slug: repositories
 title: Waterdata for the Nation Team Repositories
 description: A description of the respositories that the Water Data for the Nation team works on
 keywords:

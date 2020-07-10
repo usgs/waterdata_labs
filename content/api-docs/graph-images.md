@@ -1,23 +1,26 @@
 ---
 date: 2019-08-19
-slug: lookups-api
+slug: graph-images-api
 title: Lookups API documentation
 categories:
   - api
 type: api-post
-description: The lookups API is a 
+description: The lookups API give more information about the API 
+thumbnail_path: "/static/tableau-connector/tableau_connector.png"
+thumbnail_alt: "image of code snippet"
 keywords:
   - api
   - data
   - lookups
-  - java
+  - nodeJS
 ---
+
 
   <script type="module" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
   
 
   <div class="api_documentation">
-    <rapi-doc spec-url="https://www.waterqualitydata.us/Codes/v3/api-docs" 
+    <rapi-doc spec-url="/static/graph-images/openAPI.json" 
       show-header = 'false'
       show-info = 'false'
       allow-authentication ='false'
