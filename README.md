@@ -14,6 +14,13 @@ The 'landing page' for labs.waterdata.usgs.gov is created with the use of the st
 [**Hugo**](https://gohugo.io/).
 Modification to site contents is accomplished by following standard Hugo procedures. 
 
+## Specifying page layout for a post
+When adding a post, in general you should add the parameter containerclass and set as follows:
+```yaml
+containerclass: grid-container
+```
+This will style the page on desktop to be the standard width (recommended by USWDS) for your page's content rather than full width.
+
 # Build and develop with Docker
 
 A Dockerfile and Docker Compose configuration is provided that is capable of running a Hugo development server and
