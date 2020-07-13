@@ -1,22 +1,11 @@
-@import '../../node_modules/wdfn-viz/dist/sass/theme';
-@import '../../node_modules/wdfn-viz/dist/sass/uswds';
-
-$usgs-blue: #00264c;
-
-@import '../../node_modules/wdfn-viz/dist/sass/partials/header';
-@import '../../node_modules/wdfn-viz/dist/sass/partials/footer';
+@import '../../node_modules/wdfn-viz/dist/sass/wdfnviz';
 
 main {
+  @include u-maxw('full');
   //@include grid-container($theme-site-max-width);
   //max-width: units($theme-site-max-width);
   margin: 1em auto;
   padding: 0 1em;
-}
-
-.usgs-content {
-  max-width: units($theme-site-max-width);
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .container_content {
