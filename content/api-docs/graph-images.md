@@ -5,9 +5,9 @@ title: Lookups API documentation
 categories:
   - api
 type: api-post
-description: The lookups API give more information about the API 
-thumbnail_path: "/static/tableau-connector/tableau_connector.png"
-thumbnail_alt: "image of code snippet"
+description: Interactive documentation of the graph image API, which allows users to download an image version of the new dynamic hydrograph that is on the next generation monitoring location pages.
+thumbnail_path: "https://labs.waterdata.usgs.gov/api/graph-images/monitoring-location/09380000/?parameterCode=00060&width=300&period=P7D"
+thumbnail_alt: "A line graph showing 7 days of hydrological data.  The line is orange, with black axes"
 keywords:
   - api
   - data

@@ -5,7 +5,7 @@ title: Observations API documentation
 categories:
   - api
 type: api-post
-description: The Observations API is 
+description: The Observations API is the beginning of a next generation data web service for accessing USGS water data. 
 keywords:
   - api
   - data
