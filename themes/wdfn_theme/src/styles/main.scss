@@ -1,5 +1,10 @@
 @import '../../node_modules/wdfn-viz/dist/sass/wdfnviz';
 
+#main-content {
+  @include u-maxw('full');
+  @include u-padding-x($theme-site-margins-width);
+}
+
 pre {
   overflow-y: scroll
 }
@@ -92,3 +97,13 @@ pre {
   @extend %label-maturity;
   background-color: color("green-cool-20v");
 }
+
+// styling rapidoc
+.api_documentation {
+   @include u-width('full');
+   @include u-padding-x($theme-site-margins-width);
+   max-width: none;
+  height: 1200px;
+  overflow:scroll;
+}
+
