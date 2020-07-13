@@ -9,6 +9,7 @@ keywords:
   - Hydro-Network
   - Data Index
 image: /static/nldi/RioGrandeStreamGage.jpg
+containerclass: grid-container
 ---
 
 Users of USGS Water data products often want to know about relationships between a single monitoring location and the broader world, asking questions such as 

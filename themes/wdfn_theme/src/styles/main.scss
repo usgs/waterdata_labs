@@ -1,19 +1,9 @@
 @import '../../node_modules/wdfn-viz/dist/sass/wdfnviz';
 
-main {
+#main-content {
   @include u-maxw('full');
-  //@include grid-container($theme-site-max-width);
-  //max-width: units($theme-site-max-width);
-  margin: 1em auto;
-  padding: 0 1em;
+  @include u-padding-x($theme-site-margins-width);
 }
-
-.container_content {
-  @include grid-container($theme-site-max-width);
-  margin: 1em auto;
-  padding: 0 1em;
-}
-
 
 pre {
   overflow-y: scroll
