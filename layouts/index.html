@@ -57,5 +57,25 @@
         </li>
       {{ end }}
     </ul>
+    <ul class="usa-card-group">
+      {{ range .Sections }}
+        <li class="tablet:grid-col-4 usa-card">
+          <div class="usa-card__container">
+            <header class="usa-card__header">
+              <a href="{{ .Permalink }}"><h2 class="usa-card__heading">{{ .Title }}</h2></a>
+            </header>
+             <div class="usa-card__media usa-card__media--inset">
+              <div class="usa-card__img">
+                <img src="{{ .Params.thumbnail_path }}" alt="{{ .Params.thumbnail_alt }}">
+              </div>
+            </div>
+            <div class="usa-card__body">
+              <p>{{ .Description }}</p>
+            </div>
+          </div>
+        </li>
+      {{ end }}
+
+    </ul>
   </div>
 {{ end }}
