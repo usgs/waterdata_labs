@@ -16,14 +16,14 @@ categories:
         status: "in progress"
         thing: "Operational refinement of cloud-native data processing pipeline"
       -
-        status: "on deck"
+        status: "in progress"
         thing: "Push groundwater levels data from new systems into legacy systems"
       -
         status: "On Deck"
         thing: "Cloud native instantaneous data processing pipeline"
       -
         status: upcoming
-        thing: "evaluation of OGC Sensorthings standard"
+        thing: "Evaluation of OGC Sensorthings standard"
       -
         status: upcoming
         thing: "MVP of next generation instantaneous data service"
@@ -75,10 +75,20 @@ categories:
     status: "in progress"
     things:
       -
-        status: "in progress"
+        status: in progress
+        thing: usability testing
+      -
+        status: in progress
+        thing: "Implement new date range picker and tooltips"
+      - status: in progress
+        thing: "Use USGS National Map background layers"
+      - status: done
+        thing: "Put AHPS flood levels on gage height hydrograph"
+      -
+        status: done
         thing: "Compile user feedback and prioritize new features and usability improvements"
       -
-        status: "in progress"
+        status: done
         thing: "Groundwater daily value hydrograph"
       -
         status: done
@@ -124,16 +134,16 @@ categories:
     status: "in progress"
     things:
       -
-        status: "in progress"
+        status: done
         thing: "Network data management"
       -
-        status: "in progress"
+        status: done
         thing: "Add network metadata to OGC API"
       -
-        status: "in progress"
+        status: done
         thing: "Link to network page from monitoring location pages"
       -
-        status: "on deck"
+        status: in progress
         thing: "Put network metadata on Network pages"
       -
         status: Done
