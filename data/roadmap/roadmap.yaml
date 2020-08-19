@@ -41,7 +41,7 @@ categories:
         thing: "Experiment with OGC API - Features"
       -
         status: done
-        thing: "MVP USGS-Specific implemetation of OGC API - Features"
+        thing: "MVP USGS-Specific implementation of OGC API - Features"
   -
     name: "Next-generation landing pages with improved user navigation"
     status: "In Progress"
@@ -76,7 +76,7 @@ categories:
     things:
       -
         status: in progress
-        thing: usability testing
+        thing: "Usability testing"
       -
         status: in progress
         thing: "Implement new date range picker and tooltips"
