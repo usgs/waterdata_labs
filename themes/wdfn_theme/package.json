@@ -57,6 +57,6 @@
     "@rollup/plugin-buble": "^0.21.3",
     "@rollup/plugin-node-resolve": "^9.0.0",
     "rollup-plugin-uglify": "^6.0.4",
-    "sass": "^1.26.10"
+    "sass": "^1.26.11"
   }
 }
