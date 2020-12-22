@@ -3,6 +3,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - Header links for WMA home page and the Water Dashboard.
+- Footer links for social media.
 
 # 29-June-2020
 ### Added
