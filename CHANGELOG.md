@@ -3,6 +3,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - Header links for WMA home page and the Water Dashboard.
+- Footer links for social media.
 
 # 29-June-2020
 ### Added
@@ -15,8 +16,6 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Updated to use build guidance from USWDS version 2.6.0 and use wdfn-viz 1.5.0
 - Updated graph-image-api description to include new openAPI documentation
-
-## 20-Dec-2019
 ### Changed
 - updated graph-images content
 - added link to water availability viz
