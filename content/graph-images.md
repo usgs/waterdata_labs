@@ -47,8 +47,11 @@ So now, it is possible to render a contemporary graph from water data for the na
 
 The graph image project is a work in progress and this is a first step to meeting users’ requests for 
 easy image downloads. We have added [openAPI based documentation](https://labs.waterdata.usgs.gov/api/graph-images/api-docs/) so that users can easily see how to customize
-the images using available query parameters. The user can no customize the size, title, time period, and time series ID.
+the images using available query parameters. The user can now customize the size, title, time period, and time series ID.
 
+In the future, we plan to add additional features to the graph image server, including
+
+* more gracefully handling when no data are returned
 * additional data elements
 * different kinds of graphs beyond the basic hydrograph
 * making it possible to embed dynamic content, rather than just images, in third party pages.
