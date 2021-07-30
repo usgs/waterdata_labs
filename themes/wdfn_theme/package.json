@@ -44,7 +44,7 @@
     "wdfn-viz": "1.14.0"
   },
   "devDependencies": {
-    "@rollup/plugin-alias": "^3.1.4",
+    "@rollup/plugin-alias": "^3.1.5",
     "@rollup/plugin-buble": "^0.21.3",
     "@rollup/plugin-node-resolve": "^13.0.2",
     "autoprefixer": "^10.3.1",
