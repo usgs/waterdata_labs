@@ -1,8 +1,9 @@
-@import '../../node_modules/wdfn-viz/dist/sass/wdfnviz';
+@use 'wdfnviz';
+@use 'uswds';
 
 #main-content {
-  @include u-maxw('full');
-  @include u-padding-x($theme-site-margins-width);
+  @include uswds.u-maxw('full');
+  @include uswds.u-padding-x(uswds.$theme-site-margins-width);
 }
 
 pre {
@@ -14,38 +15,38 @@ pre {
 
 .site-roadmap-list,
 .site-roadmap-list__sublist {
-  @include add-list-reset;
+  @include uswds.add-list-reset;
 }
 
 .site-roadmap-list {
-  @include u-margin-top(2);
+  @include uswds.u-margin-top(2);
 }
 
 .site-roadmap-list__item,
 .site-roadmap-list__subitem {
-  @include u-border-top(1px);
-  @include u-line-height("lang", 3);
-  @include u-padding-top(0.5);
-  @include u-margin-top(0.5);
-  @include u-display("flex");
-  @include u-flex("wrap", "align-start");
+  @include uswds.u-border-top(1px);
+  @include uswds.u-line-height("lang", 3);
+  @include uswds.u-padding-top(0.5);
+  @include uswds.u-margin-top(0.5);
+  @include uswds.u-display("flex");
+  @include uswds.u-flex("wrap", "align-start");
 }
 
 .site-roadmap-list__item {
-  @include u-border-top("ink");
-  @include u-text("bold");
+  @include uswds.u-border-top("ink");
+  @include uswds.u-text("bold");
 
   .usa-tag {
-    @include u-flex("auto");
+    @include uswds.u-flex("auto");
   }
 }
 
 .site-roadmap-list__sublist {
-  @include u-width("full");
+  @include uswds.u-width("full");
 
   .site-roadmap-list__item {
-    @include u-border-top("base-lighter");
-    @include u-text("normal");
+    @include uswds.u-border-top("base-lighter");
+    @include uswds.u-text("normal");
   }
 }
 
@@ -60,9 +61,9 @@ pre {
 
 %label-maturity {
   //@include typeset("lang", "2xs", 4);
-  color: color("ink");
-  font-weight: font-weight("bold");
-  margin-left: units(1.5);
+  color: uswds.color("ink");
+  font-weight: uswds.font-weight("bold");
+  margin-left: uswds.units(1.5);
   //position: absolute;
   text-decoration: none;
 
@@ -74,36 +75,35 @@ pre {
 .label-alpha,
 .label-in-progress {
   @extend %label-maturity;
-  background-color: color("gold-20v");
+  background-color: uswds.color("gold-20v");
 }
 
 .label-beta,
 .label-on-deck {
   @extend %label-maturity;
-  background-color: color("primary-vivid");
-  color: color("white");
+  background-color: uswds.color("primary-vivid");
+  color: uswds.color("white");
 }
 
 .label-upcoming {
   @extend %label-maturity;
-  @include u-text("ls-1", "normal");
-  @include u-border("base-light", 1px);
-  color: color("base-dark");
-  background-color: color("transparent");
+  @include uswds.u-text("ls-1", "normal");
+  @include uswds.u-border("base-light", 1px);
+  color: uswds.color("base-dark");
+  background-color: uswds.color("transparent");
 }
 
 .label-recommended,
 .label-done {
   @extend %label-maturity;
-  background-color: color("green-cool-20v");
+  background-color: uswds.color("green-cool-20v");
 }
 
 // styling rapidoc
 .api_documentation {
-   @include u-width('full');
-   @include u-padding-x($theme-site-margins-width);
+   @include uswds.u-width('full');
+   @include uswds.u-padding-x(uswds.$theme-site-margins-width);
    max-width: none;
   height: 1200px;
   overflow:scroll;
 }
-
