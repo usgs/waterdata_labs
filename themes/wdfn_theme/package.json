@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/usgs/wdfn-updates#readme",
   "dependencies": {
-    "wdfn-viz": "1.14.0"
+    "wdfn-viz": "2.0.1"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^3.1.4",
