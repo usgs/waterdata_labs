@@ -57,6 +57,6 @@
     "sass": "^1.44.0"
   },
   "dependencies": {
-    "wdfn-viz": "2.0.1"
+    "wdfn-viz": "2.1.0"
   }
 }
