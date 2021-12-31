@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/usgs/wdfn-updates#readme",
   "devDependencies": {
-    "@rollup/plugin-alias": "^3.1.8",
+    "@rollup/plugin-alias": "^3.1.9",
     "@rollup/plugin-buble": "^0.21.3",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "autoprefixer": "^10.4.0",
