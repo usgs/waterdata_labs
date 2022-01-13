@@ -12,4 +12,7 @@ themes/wdfn_theme/static
 *.json-e
 .idea/workspace.xml
 .idea
+.vscode
+.frontmatter
+.frontmatter/**
 

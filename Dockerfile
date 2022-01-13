@@ -1,4 +1,4 @@
-FROM usgswma/python:debian-slim-buster-python-3.8
+FROM debian:stretch-slim
 
 RUN apt-get update
 RUN apt-get install -y \
@@ -7,7 +7,7 @@ RUN apt-get install -y \
     gnupg
 
 # Install Amazon Web Services Commmand Line Interface tool (awscli)
-RUN pip install awscli
+#RUN pip install awscli
 
 # Install Hugo from tar distribution to /usr/local/bin
 ARG HUGO_VERSION="0.69.0"
