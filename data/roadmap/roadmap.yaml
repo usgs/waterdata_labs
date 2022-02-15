@@ -104,6 +104,9 @@ categories:
       - status: Beta
         thing: "MVP USGS-Specific implementation of OGC API - Features"
       -
+        status: beta
+        thing: Best available groundwater data service
+      -
         status: upcoming
         thing: High performance data availability service to support search and filter users
       - status: upcoming
@@ -137,13 +140,11 @@ reach_goals:
   - "Decommissioning NWISweb current condition pages"
 
 future_years:
-  - "Next-generation current conditions services"
   - "Time series statistics services"
   - "Next-generation custom networks service for public users"
   - "Discrete water quality data services"
-  - "Next-generation discrete water use data services"
+  - "Next-generation water use data delivery"
   - "Next-generation time series statistics service"
-  - "Water use data delivery"
   - "Next-generation monitoring location service"
   - "Next-generation monitoring location summary service"
   - "Next-generation high volume instantaneous values service"
