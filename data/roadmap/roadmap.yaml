@@ -3,46 +3,6 @@
 
 categories:
   -
-    name: "Next-generation data delivery services"
-    status: "In Progress"
-    things:
-      -
-        status: "In Progress"
-        thing: "MVP of discrete groundwater levels data service"
-      -
-        status: "in progress"
-        thing: "Cloud native groundwater levels data processing"
-      -
-        status: "in progress"
-        thing: "Operational refinement of cloud-native data processing pipeline"
-      -
-        status: "in progress"
-        thing: "Push groundwater levels data from new systems into legacy systems"
-      -
-        status: "On Deck"
-        thing: "Cloud native instantaneous data processing pipeline"
-      -
-        status: upcoming
-        thing: "Evaluation of OGC Sensorthings standard"
-      -
-        status: upcoming
-        thing: "MVP of next generation instantaneous data service"
-      -
-        status: done
-        thing: "MVP of cloud-native data processing pipeline"
-      -
-        status: Done
-        thing: "MVP of daily values data service"
-      -
-        status: done
-        thing: "MVP of hydrograph image service"
-      -
-        status: done
-        thing: "Experiment with OGC API - Features"
-      -
-        status: done
-        thing: "MVP USGS-Specific implementation of OGC API - Features"
-  -
     name: "Next-generation landing pages with improved user navigation"
     status: "In Progress"
     things:
@@ -130,24 +90,64 @@ categories:
       -
         status: upcoming
         thing: "Discovery on delivering multiple sites simultaneously"
+  - name: "Next-generation data delivery services"
+    status: "In Progress"
+    things:
+      - status: "In Progress"
+        thing: "MVP of discrete groundwater levels data service"
+      - status: in progress
+        thing: "Implementation of OGC Sensorthings standard"
+      - status: Beta
+        thing: "MVP of daily values data service"
+      - status: Alpha
+        thing: "MVP of hydrograph image service"
+      - status: Beta
+        thing: "MVP USGS-Specific implementation of OGC API - Features"
+      -
+        status: beta
+        thing: Best available groundwater data service
+      -
+        status: upcoming
+        thing: High performance data availability service to support search and filter users
+      - status: upcoming
+        thing: MVP of OGC Environmental Data Retrieval API
+      - status: upcoming
+        thing: Authoritiative catalog of all USGS water related APIs
+  -
+    name: Modernized, cloud native, event-driven data processing pipelines
+    status: "In Progress"
+    things:
+      -
+        status: production
+        thing: "Discrete groundwater levels data processing"
+      -
+        status: in progress
+        thing: Instantaneous values processing
+      -
+        status: beta
+        thing:  Daily values data processing
+      -
+        status: upcoming
+        thing: Monitoring Location data processing
+      -
+        status: upcoming
+        thing: Discrete water quality data processing
+
 
 reach_goals:
   - "Updated delivery of samples data (discrete water quality data)"
+  - "Updated processing and delivery of discrete stage and discharge data"
   - "Decommissioning NWISweb current condition pages"
 
 future_years:
-  - "Next-generation current conditions services"
   - "Time series statistics services"
   - "Next-generation custom networks service for public users"
   - "Discrete water quality data services"
-  - "Next-generation discrete water use data services"
+  - "Next-generation water use data delivery"
   - "Next-generation time series statistics service"
-  - "Water use data delivery"
-
-next_year:
   - "Next-generation monitoring location service"
   - "Next-generation monitoring location summary service"
-  - "Next-generation instantaneous values service"
+  - "Next-generation high volume instantaneous values service"
   - "Next-generation best available time series service"
   - "Next-generation daily values services for all data"
   - "Decommission NWISweb qwdata"

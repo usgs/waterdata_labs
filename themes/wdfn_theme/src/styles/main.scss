@@ -93,7 +93,7 @@ pre {
   background-color: uswds.color("transparent");
 }
 
-.label-recommended,
+.label-recommended, .label-production,
 .label-done {
   @extend %label-maturity;
   background-color: uswds.color("green-cool-20v");
