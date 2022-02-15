@@ -4,10 +4,11 @@ RUN apt-get update
 RUN apt-get install -y \
     build-essential \
     curl \
-    gnupg
+    gnupg \
+    python3-pip
 
 # Install Amazon Web Services Commmand Line Interface tool (awscli)
-RUN pip install awscli
+RUN pip3 install awscli
 
 # Install Hugo from tar distribution to /usr/local/bin
 ARG HUGO_VERSION="0.69.0"
