@@ -16,7 +16,7 @@ RUN curl --silent --location https://github.com/gohugoio/hugo/releases/download/
 RUN tar xzf hugo.tar.gz -C /usr/local/bin
 
 # Install node.js from official package.
-RUN curl --silent --location https://deb.nodesource.com/setup_14.x | bash -
+RUN curl --silent --location https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get -y update
 RUN apt-get install -y nodejs
 
