@@ -21,12 +21,14 @@ Users of USGS Water data products often want to know about relationships between
 
 The good news is that the USGS and other federal agencies have worked for decades to produce, maintain, and expand the [National Hydrography Dataset (NHD)](https://www.usgs.gov/core-science-systems/ngp/national-hydrography), a data set that is capable of answering just these kinds of questions.  The challenge is that the NHD has its origins as a cartographic tool, and its primary audience historically has been cartographers and GIS analysts.  Our goal in the water data team is to make the data in the NHD available to new audiences so that it can be part of a larger [National Hydrography Infrastructure](https://www.usgs.gov/core-science-systems/ngp/national-hydrography/national-hydrography-infrastructure-working-group), and as a first step, we have developed the Hydro Network Linked Data Index (NLDI), which puts a restful *a*pplication *p*rogramming *i*nterface (API) in front of the NHD dataset. Now, instead of needing to be a GIS professional, any web developer can build tools against the core data in the NHD in a scalable, workable way.  
 
-To learn more about the NLDI, please check read the FAQs below and check out [this blog post that goes over the basic features of NLDI](https://waterdata.usgs.gov/blog/nldi-intro/).  There will be more coming about the NLDI soon.
+To learn more about the NLDI, please check read the summary below and check out [this blog post that goes over the basic features of NLDI](https://waterdata.usgs.gov/blog/nldi-intro/), [this update](https://waterdata.usgs.gov/blog/nldi_update/), and this summary of how the [NLDI will work](https://waterdata.usgs.gov/blog/nldi-geoconnex/) with [geoconnex.us](https://geoconnex.us/).
 
 The Water Data for the Nation development team is using the NLDI to show gages that are upstream and downstream of an existing gage, as seen below.
 {{< figure src="/static/nldi/up_down_09380000.png" alt="A map showing gages as orange dots, upstream lines as dark blue, and downstream lines as light blue. There is a text pop-up noting the name and number of the next upstream site" caption="Map showing the gages 200 miles upstream and downstream on the main stream of the Colorado River from monitoring location 09380000, [Colorado River at Lee's Ferry, AZ](https://waterdata.usgs.gov/monitoring-location/09380000/)" >}}
 
 You can also see the NLDI in action at the [Water Quality Portal](https://www.waterqualitydata.us/portal/#nldiurl=https%3A%2F%2Fcida.usgs.gov%2Fnldi%2Fnwissite%2FUSGS-05428500%2Fnavigate%2FUT%2Fwqp%3Fdistance%3D&mimeType=csv), where it is possible to download data by using upstream and downstream queries, based on the NLDI.
+
+The NLDI is also available from the [nhdplusTools](https://usgs-r.github.io/nhdplusTools/) and [dataRetrieval](http://usgs-r.github.io/dataRetrieval/) R packages and the [HyRiver](https://hyriver.readthedocs.io/en/latest/) Python package.
 
 Try it out and [contact us](https://water.usgs.gov/contact/gsanswers?pemail=gs-w_water_data_for_the_nation&subject=Water%20Data%20for%20the%20Nation%20Labs%20Feedback&viewnote=%3CH1%3EUSGS+NLDI+Feedback%3C/H1%3E) about how it works for you.
 
@@ -72,7 +74,7 @@ A hydrologic location can be accessed using the hydrolocation end point.
 All features in a feature source can be accessed at the feature source end point. This is a large geojson file that can be used for mapping.  
 [https://labs.waterdata.usgs.gov/api/nldi/linked-data/huc12pp](https://labs.waterdata.usgs.gov/api/nldi/linked-data/huc12pp)  
 
-The `comid` feature source includes a special "position" function for discovering a starting network id (`comid`).
+The `comid` feature source includes a special "position" function for discovering a starting network id (`comid`).  
 [https://labs.waterdata.usgs.gov/api/nldi/linked-data/comid/position?coords=POINT(-89.35 43.0864)](https://labs.waterdata.usgs.gov/api/nldi/linked-data/comid/position?coords=POINT(-89.35%2043.0864)) 
 
 Once a feature source id is found, it can be retrieved like:  
@@ -84,13 +86,13 @@ This response includes a navigation URL like:
 This URL returns navigation options. Choosing one, we can get available data sources:  
 [https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/navigation/UT](https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/navigation/UT)  
 
-Adding flowlines and a distance to this URL gives us back flowlines along the navigation.
+Adding flowlines and a distance to this URL gives us back flowlines along the navigation.  
 [https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/navigation/UT/flowlines?distance=10](https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/navigation/UT/flowlines?distance=10)
   
 If another source feature type is desired, it can be accessed like:  
 [https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/navigate/UT/wqp?distance=100](https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/navigate/UT/wqp?distance=100) for water quality portal sites.  
   
-An additional function that is available on NLDI is basin boundaries. If we add `/basin/` to the end of a given NLDI feature URL, the upstream basin of the feature is returned. 
+An additional function that is available on NLDI is basin boundaries. If we add `/basin/` to the end of a given NLDI feature URL, the upstream basin of the feature is returned.  
 [https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/basin/](https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/basin/)
 
 We can also get landscape characteristics for local or total upstream areas.  
