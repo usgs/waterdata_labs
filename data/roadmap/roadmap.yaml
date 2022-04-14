@@ -2,166 +2,155 @@
 # allowed "status" values: "upcoming", "on deck", "in progress", "done"
 
 categories:
-
-  -
-    name: "Next-generation data delivery services"
-    status: "In Progress"
-    things:
-      -
-        status: In Progress
-        thing: "MVP of discrete groundwater levels data service"
-      - thing: Cloud native groundwater levels data processing
-        status: in progress
-      - thing: Operational refinement of cloud-native data processing pipeline
-        status: in progress
-      - thing: Push groundwater levels data from new systems into legacy systems
-        status: on deck
-      - status: On Deck
-        thing: "MVP of next generation instantaneous data service"
-      - status: On Deck
-        thing: "Cloud native instantaneous data processing pipeline"
-      - thing: MVP of cloud-native data processing pipeline
-        status: done
-      - status: Done
-        thing: "MVP of daily values data service"
-      - thing: MVP of hydrograph image service
-        status: done
-      - thing: Experiment with OGC API - Features
-        status: done
-      - thing: MVP USGS-Specific implemetation of OGC API - Features
-        status: done
-
   -
     name: "Next-generation landing pages with improved user navigation"
     status: "In Progress"
     things:
       -
-        thing: "18F Phase I: Kickoff & Discovery"
         status: Done
+        thing: "18F Phase I: Discovery"
       -
-        thing: "18F Phase I: User Research"
         status: Done
+        thing: "18F Phase II: Search and Filter mapper alpha development"
       -
-        thing: "18F Phase I: Synthesis & prioritization"
-        status: Done
+        status: on deck
+        thing: "Search and Filter mapper beta development"
       -
-        thing: "18F Phase I: Roadmap & Low-fidelity prototyping"
-        status: Done
+        status: on deck
+        thing: "Consolidated download beta development"
       -
-        thing: "18F Phase II: Planning"
-        status: Done
-      -
-        thing: "18F Phase II: Prototype"
-        status: In progress
-      -
-        thing: "18F Phase II: Iterate"
-        status: In progress
-      -
-        thing: "18F Phase II: Transition & Handoff"
-        status: On deck
-        
+        status: upcoming
+        thing: "Decommissioning NWISmapper"
   -
     name: "Next-generation monitoring location pages"
     status: "in progress"
     things:
-      - thing: "Compile user feedback and prioritize new features and usability improvements"
-        status: in progress
       -
-        thing: "Groundwater daily value hydrograph"
-        status: in progress
-      - thing: "Brush on hydrograph"
         status: done
-      - status: Done
-        thing: "Celsius and fahrenheit degrees on temperature scales"
-      - status: Done
-        thing: "Refine axis scaling"
-      - status: Done
-        thing: "Multiple time series with the same parameter"
-      - status: Done
-        thing: "Toggling the median"
-      - status: Done
-        thing: "Monitoring location cameras prototype"
-      - status: Done
-        thing: "[NLDI](https://labs.waterdata.usgs.gov/about-nldi/index.html) on the cloud"
-      - status: Done
-        thing: "Brush on hydrograph"
-      - status: Done
-        thing: "Brush handles"
-      - status: Done
-        thing: "Repositories page"
-      - status: Done
-        thing: "Save state of hydrograph"
-      - status: Done
-        thing: "Use [NLDI](https://labs.waterdata.usgs.gov/about-nldi/index.html) to show upstream basin and upstream and downstream monitoring locations"
-      - status: Done
-        thing: "Parameter period of record"
-
-
-  -
-    name: "Next-generation networks service and networks pages"
-    status: "in progress"
-    things:
+        thing: "Site-specific alerts (info, warning, errors)"
       -
-        thing: "Network data management"
+        status: done
+        thing: "Site-specific data context"
+      - 
+        status: done
+        thing: "Groundwater-specific hydrograph options (for sites with only field visits)"
+      - 
         status: in progress
-      - thing: "Add network metadata to OGC API"
+        thing: "Groundwater qualifiers in data table"
+      -
         status: in progress
-      - thing: Link to network page from monitoring location pages
-        status: in progress
-      - status: on deck
-        thing: "Put network metadata on Network pages"
-      - status: Done
-        thing: "MVP of network pages"
-      - status: Done
-        thing: "MVP network metadata management and services"
-
+        thing: "Monitoring Location Pages Minimal Viable Product (MVP)"
+      -
+        status: on deck
+        thing: "Allow two parameters on hydrograph"
+      -
+        status: on deck
+        thing: "Provide daily statistics for parameters"
+      -
+        status: upcoming
+        thing: "Deliver field and samples measurements"
   -
-    name: "Stakeholder Outreach"
+    name: "Next-generation WaterAlert"
     status: "In Progress"
     things:
-       -
-        status: In Progress
-        thing: "Water quality outreach and listening sessions"
-       -
-        status: In Progress
-        thing: "NWIS Annual Survey, release for public on July 20, 2020"
-       -
-        status: Done
-        thing: "NWISweb user research (18F Phase I)"
-       -
-        status: In Progress
-        thing: "WDFN user testing (18F Phase II)"
+      -
+        status: in progress
+        thing: "WaterAlert alpha development"
+      -
+        status: on deck
+        thing: "WaterAlert beta development"
+      -
+        status: on deck
+        thing: "Communicating the next generation features and roadmap"
+      -
+        status: on deck
+        thing: "Transitioning user accounts from legacy to next generation"
+      -
+        status: upcoming
+        thing: "Transition to next generation WaterAlert"
+      -
+        status: upcoming
+        thing: "Decommissioning legacy WaterAlert"
+  -
+    name: "Stakeholder Outreach and Discovery"
+    status: "In Progress"
+    things:
+      -
+        status: done
+        thing: "Discovery on groundwater censored data"
+      -
+        status: in progress
+        thing: "NWIS Annual Survey"
+      -
+        status: in progress
+        thing: "Discovery on water quality tabular data"
+      -
+        status: on deck
+        thing: "Discovery on modernizing WaterQualityWatch, WaterWatch, GroundWaterWatch"
+      -
+        status: upcoming
+        thing: "Discovery on delivering multiple sites simultaneously"
+  - name: "Next-generation data delivery services"
+    status: "In Progress"
+    things:
+      - status: "In Progress"
+        thing: "MVP of discrete groundwater levels data service"
+      - status: in progress
+        thing: "Implementation of OGC Sensorthings standard"
+      - status: Beta
+        thing: "MVP of daily values data service"
+      - status: Alpha
+        thing: "MVP of hydrograph image service"
+      - status: Beta
+        thing: "MVP USGS-Specific implementation of OGC API - Features"
+      -
+        status: beta
+        thing: Best available groundwater data service
+      -
+        status: upcoming
+        thing: High performance data availability service to support search and filter users
+      - status: upcoming
+        thing: MVP of OGC Environmental Data Retrieval API
+      - status: upcoming
+        thing: Authoritiative catalog of all USGS water related APIs
+  -
+    name: Modernized, cloud native, event-driven data processing pipelines
+    status: "In Progress"
+    things:
+      -
+        status: production
+        thing: "Discrete groundwater levels data processing"
+      -
+        status: in progress
+        thing: Instantaneous values processing
+      -
+        status: beta
+        thing:  Daily values data processing
+      -
+        status: upcoming
+        thing: Monitoring Location data processing
+      -
+        status: upcoming
+        thing: Discrete water quality data processing
 
 
-
-
-
-
-
-
-
-
-
-# reach goals are simpler, just a single phrase or sentence to describe a thing that we may do.  If it really becomes a
-# thing we will do, it gets promoted to categories and is broken down as neccessary
 reach_goals:
-  - Prototype next generation Alert Service
-  - Search and Filter Prototype (18F Phase II, deployed to demo space)
-  - "Next-generation daily values data service (all data)"
-
-next_year:
-  - Next-generation WaterAlert notification system
-  - Next-generation monitoring location service
-  - Next-generation current conditions maps
-  - Next-generation monitoring location summary service
-  - Next-generation instantaneous values service
-  - Next-generation best available time series service
-  - Next-generation daily values services for all data
+  - "Updated delivery of samples data (discrete water quality data)"
+  - "Updated processing and delivery of discrete stage and discharge data"
+  - "Decommissioning NWISweb current condition pages"
 
 future_years:
-  - Next-generation current conditions services
-  - Time series statistics services
-  - Next-generation custom networks service for public users
-  - Discrete water quality data services
-  - Next-generation discrete water use data services
-  - Next-generation time series statistics service
+  - "Time series statistics services"
+  - "Next-generation custom networks service for public users"
+  - "Discrete water quality data services"
+  - "Next-generation water use data delivery"
+  - "Next-generation time series statistics service"
+  - "Next-generation monitoring location service"
+  - "Next-generation monitoring location summary service"
+  - "Next-generation high volume instantaneous values service"
+  - "Next-generation best available time series service"
+  - "Next-generation daily values services for all data"
+  - "Decommission NWISweb qwdata"
+  - "Decommission NWISweb current conditions pages"
+  - "Next-generation replacement for the Watches"
+  - "Multi-site report (features to support reviewing data from multiple sites simultaneously)"

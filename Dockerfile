@@ -1,13 +1,14 @@
-FROM usgswma/python:debian-slim-buster-python-3.8
+FROM debian:stretch-slim
 
 RUN apt-get update
 RUN apt-get install -y \
     build-essential \
     curl \
-    gnupg
+    gnupg \
+    python3-pip
 
 # Install Amazon Web Services Commmand Line Interface tool (awscli)
-RUN pip install awscli
+RUN pip3 install awscli
 
 # Install Hugo from tar distribution to /usr/local/bin
 ARG HUGO_VERSION="0.69.0"
@@ -15,7 +16,7 @@ RUN curl --silent --location https://github.com/gohugoio/hugo/releases/download/
 RUN tar xzf hugo.tar.gz -C /usr/local/bin
 
 # Install node.js from official package.
-RUN curl --silent --location https://deb.nodesource.com/setup_12.x | bash -
+RUN curl --silent --location https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get -y update
 RUN apt-get install -y nodejs
 

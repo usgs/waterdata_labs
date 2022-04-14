@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <article class="single">
+  <article class="single {{ .Params.containerclass }}">
       <h1>{{ .Title }}</h1>
       {{ .Content }}
   </article>
