@@ -21,7 +21,7 @@ Users of USGS Water data products often want to know about relationships between
 
 The good news is that the USGS and other federal agencies have worked for decades to produce, maintain, and expand the [National Hydrography Dataset (NHD)](https://www.usgs.gov/core-science-systems/ngp/national-hydrography), a data set that is capable of answering just these kinds of questions.  The challenge is that the NHD has its origins as a cartographic tool, and its primary audience historically has been cartographers and GIS analysts.  Our goal in the water data team is to make the data in the NHD available to new audiences so that it can be part of a larger [National Hydrography Infrastructure](https://www.usgs.gov/core-science-systems/ngp/national-hydrography/national-hydrography-infrastructure-working-group), and as a first step, we have developed the Hydro Network Linked Data Index (NLDI), which puts a restful *a*pplication *p*rogramming *i*nterface (API) in front of the NHD dataset. Now, instead of needing to be a GIS professional, any web developer can build tools against the core data in the NHD in a scalable, workable way.  
 
-To learn more about the NLDI, please check read the summary below and check out [this blog post that goes over the basic features of NLDI](https://waterdata.usgs.gov/blog/nldi-intro/), [this update](https://waterdata.usgs.gov/blog/nldi_update/), and this summary of how the [NLDI will work](https://waterdata.usgs.gov/blog/nldi-geoconnex/) with [geoconnex.us](https://geoconnex.us/).
+To learn more about the NLDI, read the summary below and check out [this blog post that goes over the basic features of NLDI](https://waterdata.usgs.gov/blog/nldi-intro/), [this update](https://waterdata.usgs.gov/blog/nldi_update/), and this summary of how the [NLDI will work](https://waterdata.usgs.gov/blog/nldi-geoconnex/) with [geoconnex.us](https://geoconnex.us/).
 
 The Water Data for the Nation development team is using the NLDI to show gages that are upstream and downstream of an existing gage, as seen below.
 {{< figure src="/static/nldi/up_down_09380000.png" alt="A map showing gages as orange dots, upstream lines as dark blue, and downstream lines as light blue. There is a text pop-up noting the name and number of the next upstream site" caption="Map showing the gages 200 miles upstream and downstream on the main stream of the Colorado River from monitoring location 09380000, [Colorado River at Lee's Ferry, AZ](https://waterdata.usgs.gov/monitoring-location/09380000/)" >}}
@@ -55,10 +55,12 @@ The public face of the NLDI is a search service that takes a watershed identifie
 How is the NLDI service structured?
 -----------------------------------------------------------------------
 
+NOTE: {featureSource}, {featureID}, and {dataSource} are variables that must be provided as shown in the example requests further down.
+
 *   `https://labs.waterdata.usgs.gov/api/nldi/linked-data` returns indexed feature sources.
-*   `https://labs.waterdata.usgs.gov/api/nldi/linked-data/featureSource/featureID/navigation` returns the navigation options for that feature ID from the given feature source.
-*   `https://labs.waterdata.usgs.gov/api/nldi/linked-data/featureSource/featureID/navigation/mode/dataSource` returns the data derived from a navigation with the provided mode for the requested data source.
-*   `https://labs.waterdata.usgs.gov/api/nldi/linked-data/featureSource/featureID/basin` returns a basin boundary upstream of that featureID.
+*   `https://labs.waterdata.usgs.gov/api/nldi/linked-data/{featureSource}/{featureID}/navigation` returns the navigation options for that feature ID from the given feature source.
+*   `https://labs.waterdata.usgs.gov/api/nldi/linked-data/{featureSource}/{featureID}/navigation/mode/{dataSource}` returns the data derived from a navigation with the provided mode for the requested data source.
+*   `https://labs.waterdata.usgs.gov/api/nldi/linked-data/{featureSource}/{featureID}/basin` returns a basin boundary upstream of that feature ID.
 
 For more details, see standard swagger API documentation here: [https://labs.waterdata.usgs.gov/api/nldi/swagger-ui.html](https://labs.waterdata.usgs.gov/api/nldi/swagger-ui.html)
 
