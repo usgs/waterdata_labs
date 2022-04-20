@@ -12,14 +12,14 @@ image: /static/nldi/RioGrandeStreamGage.jpg
 containerclass: grid-container
 ---
 
-Users of USGS Water data products often want to know about relationships between a single monitoring location and the broader world, asking questions such as 
+Users of USGS Water data products are often looking to find answers to questions such as:
 
 * What stream gages are upstream or downstream of this one? 
 * Where does the water at this location come from?
 * How big or small is the upstream basin for a location?
 * Where does the water from this location go?
 
-The good news is that the USGS and other federal agencies have worked for decades to produce, maintain, and expand the [National Hydrography Dataset (NHD)](https://www.usgs.gov/core-science-systems/ngp/national-hydrography), a data set that is capable of answering just these kinds of questions.  The challenge is that the NHD has its origins as a cartographic tool, and its primary audience historically has been cartographers and GIS analysts.  Our goal in the water data team is to make the data in the NHD available to new audiences so that it can be part of a larger [National Hydrography Infrastructure](https://www.usgs.gov/core-science-systems/ngp/national-hydrography/national-hydrography-infrastructure-working-group), and as a first step, we have developed the Hydro Network Linked Data Index (NLDI), which puts a restful *a*pplication *p*rogramming *i*nterface (API) in front of the NHD dataset. Now, instead of needing to be a GIS professional, any web developer can build tools against the core data in the NHD in a scalable, workable way.  
+The good news is that the USGS and other federal agencies have worked for decades to produce, maintain, and expand the [National Hydrography Dataset (NHD)](https://www.usgs.gov/core-science-systems/ngp/national-hydrography), a data set that is capable of answering just these kinds of questions.  The challenge is that the NHD has its origins as a cartographic tool, and its primary audience historically has been cartographers and GIS analysts.  Our goal in the water data team is to make the data in the NHD available to new audiences so that it can be part of a larger [National Hydrography Infrastructure](https://www.usgs.gov/core-science-systems/ngp/national-hydrography/national-hydrography-infrastructure-working-group). As a first step towards this goal, we have developed the Hydro Network Linked Data Index (NLDI), which puts a restful *a*pplication *p*rogramming *i*nterface (API) in front of the NHD dataset. Now, instead of needing to be a GIS professional, any web developer can build tools against the core data in the NHD in a scalable, workable way.  
 
 To learn more about the NLDI, read the summary below and check out [this blog post that goes over the basic features of NLDI](https://waterdata.usgs.gov/blog/nldi-intro/), [this update](https://waterdata.usgs.gov/blog/nldi_update/), and this summary of how the [NLDI will work](https://waterdata.usgs.gov/blog/nldi-geoconnex/) with [geoconnex.us](https://geoconnex.us/).
 
@@ -72,41 +72,41 @@ For more details, see standard swagger API documentation here: [https://labs.wat
 What are some example service requests?
 -------------------------
 
-To return a list of data sources available from the NLDI:  
+Return a list of data sources available from the NLDI.  
 [https://labs.waterdata.usgs.gov/api/nldi/linked-data](https://labs.waterdata.usgs.gov/api/nldi/linked-data)  
   
-A hydrologic location can be accessed using the hydrolocation end point.  
+Access a hydrologic location using the hydrolocation end point.  
 [https://labs.waterdata.usgs.gov/api/nldi/linked-data/hydrolocation?f=json&coords=POINT(-89.35 43.0864)](https://labs.waterdata.usgs.gov/api/nldi/linked-data/hydrolocation?coords=POINT(-89.35%2043.0864))
   
-All features in a feature source can be accessed at the feature source end point. This is a large geojson file that can be used for mapping.  
+Access all features in a feature source at the feature source end point. This is a large geojson file that can be used for mapping.  
 [https://labs.waterdata.usgs.gov/api/nldi/linked-data/huc12pp](https://labs.waterdata.usgs.gov/api/nldi/linked-data/huc12pp)  
 
-The `comid` feature source includes a special "position" function for discovering a starting network id (`comid`).  
+Discover a starting network id (`comid`) with the "position" function.  
 [https://labs.waterdata.usgs.gov/api/nldi/linked-data/comid/position?coords=POINT(-89.35 43.0864)](https://labs.waterdata.usgs.gov/api/nldi/linked-data/comid/position?coords=POINT(-89.35%2043.0864)) 
 
-Once a feature source id is found, it can be retrieved like:  
+Retrieve a feature source id once it is found.  
 [https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700](https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700)  
   
-This response includes a navigation URL like:  
+Find the navigation URL in the feature source response.  
 [https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/navigation](https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/navigation)  
   
-This URL returns navigation options. Choosing one, we can get available data sources:  
+Get available data sources by choosing from the list returned by one of the navigation options.  
 [https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/navigation/UT](https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/navigation/UT)  
 
-Adding flowlines and a distance to this URL gives us back flowlines along the navigation.  
+Return flowlines along the navigation by selecting flowlines and adding a distance to the last URL.  
 [https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/navigation/UT/flowlines?distance=10](https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/navigation/UT/flowlines?distance=10)
   
-If another source feature type is desired, it can be accessed like:  
+Access another source feature type is desired.  
 [https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/navigate/UT/wqp?distance=100](https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/navigate/UT/wqp?distance=100) for water quality portal sites.  
   
-An additional function that is available on NLDI is basin boundaries. If we add `/basin/` to the end of a given NLDI feature URL, the upstream basin of the feature is returned.  
+Return the upstream basin of a feature by adding `/basin/` to the end of a given NLDI feature URL.
 [https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/basin/](https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/basin/)
 
-We can also get landscape characteristics for local or total upstream areas.  
+Return landscape characteristics for local or total upstream areas.  
 [https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/local](https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/local) or  
 [https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/tot](https://labs.waterdata.usgs.gov/api/nldi/linked-data/nwissite/USGS-05429700/tot)
 
-All characteristic metadata can be accessed through this end point.  
+Access all characteristic metadata.  
 [https://labs.waterdata.usgs.gov/api/nldi/lookups/](https://labs.waterdata.usgs.gov/api/nldi/lookups/)
 
 How to contribute network-linked content
