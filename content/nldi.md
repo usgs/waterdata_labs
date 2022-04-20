@@ -62,6 +62,11 @@ NOTE: {featureSource}, {featureID}, and {dataSource} are variables that must be 
 *   `https://labs.waterdata.usgs.gov/api/nldi/linked-data/{featureSource}/{featureID}/navigation/mode/{dataSource}` returns the data derived from a navigation with the provided mode for the requested data source.
 *   `https://labs.waterdata.usgs.gov/api/nldi/linked-data/{featureSource}/{featureID}/basin` returns a basin boundary upstream of that feature ID.
 
+<figure>
+<img src='/static/nldi/nldi-api.png' title='Network Linked Data Index API Diagram' alt='Diagram showing the overall Network Linked Data Index API' >
+<figcaption>NLDI API Summary Diagram</figcaption>
+</figure>
+
 For more details, see standard swagger API documentation here: [https://labs.waterdata.usgs.gov/api/nldi/swagger-ui.html](https://labs.waterdata.usgs.gov/api/nldi/swagger-ui.html)
 
 What are some example service requests?
@@ -107,9 +112,9 @@ All characteristic metadata can be accessed through this end point.
 How to contribute network-linked content
 ----------------------------------------
 
-Content to be added to the NLDI needs to be available as GeoJSON accessible via a public URL. Required attributes include: 1) an ID suitable for use in a URL, 2) a descriptive name, and 3) a URL that can be used to access information about each feature. The url is not explicitly required but is strongly recommended. Given this information, the NLDI crawler code will match each point to an NHDPlus catchment and the data will be available via NLDI search services. More information is available [here.](https://github.com/ACWI-SSWD/nldi-crawler) or contact [dblodgett@usgs.gov](mailto:dblodgett@usgs.gov) to coordinate addition of data sources.
+Content to be added to the NLDI needs to be available as GeoJSON accessible via a public URL. Required attributes include: 1) an ID suitable for use in a URL, 2) a descriptive name, and 3) a URL that can be used to access information about each feature. The url is not explicitly required but is strongly recommended. Given this information, the NLDI crawler code will match each point to an NHDPlus catchment and the data will be available via NLDI search services. More information is available [here.](https://github.com/internetofwater/nldi-crawler) or contact [dblodgett@usgs.gov](mailto:dblodgett@usgs.gov) to coordinate addition of data sources.
 
 How is the NLDI being developed?
 -------------------------------------------
 
-The NLDI is being developed as an open source project on github. Most of the project code and open issues are housed in the [NLDI-Services repository](https://github.com/ACWI-SSWD/nldi-services). The crawler code and database code is housed with other [spatial water data repositories on Github](https://github.com/ACWI-SSWD) Anyone interested in adding new functionality is encouraged to fork the repository, let others who follow the repository know you are working on one of the existing issues or a new one, and submit new functionality via pull request.  
+The NLDI is being developed as an open source project on github. Most of the project code and open issues are housed in the [NLDI-Services repository](https://github.com/internetofwater/nldi-services). The crawler code and database code is housed with other [spatial water data repositories on Github](https://github.com/internetofwater) Anyone interested in adding new functionality is encouraged to fork the repository, let others who follow the repository know you are working on one of the existing issues or a new one, and submit new functionality via pull request.  
