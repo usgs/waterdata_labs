@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 - Header links for WMA home page and the Water Dashboard.
 - Footer links for social media.
 
+# 17-April-2022
+### Changed
+- NLDI landing page updated
+
 # 29-June-2020
 ### Added
 - Development roadmap
