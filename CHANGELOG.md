@@ -1,11 +1,16 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# 21-April-2022
+### Changed
+- Updated development roadmap
+- Removed National Integrated Water Availability Assessments-Concept Map
+
+# 17-April-2022
 ### Added
 - Header links for WMA home page and the Water Dashboard.
 - Footer links for social media.
 
-# 17-April-2022
 ### Changed
 - NLDI landing page updated
 
