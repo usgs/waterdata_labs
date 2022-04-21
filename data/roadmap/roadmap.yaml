@@ -132,7 +132,7 @@ categories:
       -
         status: upcoming
         thing: Discrete water quality data processing
-		
+  -
     name: Hydro Network-Linked Data Index (NLDI) provides API search services to discover and retrieve NHDPlus V2 indexed data. 
     status: "production"
     things:
@@ -148,7 +148,7 @@ categories:
       -
         status: in progress
         thing: "Integration with (pygeoapi) geoprocessing services"
-		
+  -
     name: Geo Data Portal (GDP) combined with a THREDDS server provides a user-interface for subsetting and summarization access to numerous gridded climate and land use datasets. 
     status: "production"
     things:
@@ -164,7 +164,7 @@ categories:
       -
         status: in progress
         thing: "Host more datasets as needed"
-		
+  -
     name: GeoServer provides metadata and data access for scientific datasets, using WMS, WFS, and WCS
     status: "production"
     things:
@@ -183,7 +183,7 @@ categories:
       -
         status: in progress
         thing: "Host more datasets as needed"
-		
+  -
     name: Pygeoapi is a Python server implementation which provides the capability to deploy RESTful OGC API endpoints using OpenAPI, GeoJSON, and HTML 
     status: "production"
     things:
@@ -202,7 +202,7 @@ categories:
       -
         status: upcoming
         thing: "More custom endpoints as needed"
-		
+  -
     name: Geo Data Portal (GDP) combined with a THREDDS server provides a user-interface for subsetting and summarization access to numerous gridded climate and land use datasets. 
     status: "production"
     things:
