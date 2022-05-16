@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# 10-May-2022
+### Changed
+- Added GDP, Geoserver, Cloud Optimized Data Access, and Pygeoapi projects to home page
+- Have the index.html Link look to the slug to allow external links
+
 # 21-April-2022
 ### Changed
 - Updated development roadmap
