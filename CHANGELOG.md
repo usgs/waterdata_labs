@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# 15-May-2022
+### Changed
+- Adjusted NHGF content in the roadmap.yaml
+- Added an if statement for the parent list item status button as NHGF elements are not using it and if no content a line is still rendered.
+
 # 10-May-2022
 ### Changed
 - Added GDP, Geoserver, Cloud Optimized Data Access, and Pygeoapi projects to home page

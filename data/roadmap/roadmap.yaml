@@ -133,8 +133,7 @@ categories:
         status: upcoming
         thing: Discrete water quality data processing
   -
-    name: Hydro Network-Linked Data Index (NLDI) provides API search services to discover and retrieve NHDPlus V2 indexed data. 
-    status: "production"
+    name: Hydro-Network Linked Data Index (NLDI)
     things:
       -
         status: done
@@ -148,77 +147,81 @@ categories:
       -
         status: in progress
         thing: "Integration with (pygeoapi) geoprocessing services"
-  -
-    name: Geo Data Portal (GDP) combined with a THREDDS server provides a user-interface for subsetting and summarization access to numerous gridded climate and land use datasets. 
-    status: "production"
-    things:
+  - 
+    name: Geo Data Portal (GDP) and THREDDS
+    things: 
       -
         status: done
-        thing: "Modernized, cloud-native deployment of GDP and THREDDS"
+        thing: Modernized, cloud-native deployment of GDP and THREDDS
       -
         status: done
-        thing: "Host gridded climate and land use datasets"
+        thing: Host gridded climate and land use datasets
       -
         status: in progress
-        thing:  "Determine optimal Cloud storage/retrieval for THREDDS data"
-      -
-        status: in progress
-        thing: "Host more datasets as needed"
-  -
-    name: GeoServer provides metadata and data access for scientific datasets, using WMS, WFS, and WCS
-    status: "production"
-    things:
-      -
-        status: done
-        thing: "Modernized, cloud-native deployment of GeoServer"
-      -
-        status: done
-        thing: "Host NHDPlusV2 flowlines, catchments, and water bodies"
-      -
-        status: done
-        thing:  "Host HUC08 and HUC12 catchments"
-      -
-        status: done
-        thing: "Host GAGES II gage locations and basins"
-      -
-        status: in progress
-        thing: "Host more datasets as needed"
-  -
-    name: Pygeoapi is a Python server implementation which provides the capability to deploy RESTful OGC API endpoints using OpenAPI, GeoJSON, and HTML 
-    status: "production"
-    things:
-      -
-        status: done
-        thing: "Modernized, cloud-native deployment of pygeoapi"
-      -
-        status: done
-        thing: "Flow trace, split catchment, and cross section tools deployed as custom endpoints"
-      -
-        status: done
-        thing:  "Template approach to enable NHGF scientists to easily create new custom endpoints"
-      -
-        status: in progress
-        thing: "Environmental Data Retrieval (EDR) and WWDB endpoint(s) for data discovery and querying"
+        thing: Determine optimal cloud storage/retrieval for THREDDS data
       -
         status: upcoming
-        thing: "More custom endpoints as needed"
-  -
-    name: Geo Data Portal (GDP) combined with a THREDDS server provides a user-interface for subsetting and summarization access to numerous gridded climate and land use datasets. 
-    status: "production"
-    things:
+        thing: Host more datasets as needed
+  - 
+    name: GeoServer
+    things: 
       -
         status: done
-        thing: "Publicly readable (requester pays) S3 bucket"
+        thing: Modernized, cloud-native deployment of GeoServer
       -
-        status: in progress
-        thing: "Cloud-optimized data access with a STAC catalog for discovery"
+        status: done
+        thing: Host NHDPlusV2 flowlines, catchments, and water bodies
       -
-        status: in progress
-        thing:  "Data lifecycle pipeline MVP almost done"
+        status: done
+        thing: Host HUC08 and HUC12 catchments
+      -
+        status: done
+        thing: Host GAGES II gage locations and basins
       -
         status: upcoming
-        thing: "Cloud infrastructure monitoring (cost, system health, usage statistics)"
-
+        thing: Host more datasets as needed
+  - 
+    name: Pygeoapi
+    things: 
+      -
+        status: done
+        thing: Modernized, cloud-native deployment of pygeoapi
+      -
+        status: done
+        thing: Flow trace, split catchment, and cross section tools deployed as custom endpoints
+      -
+        status: done
+        thing: Template approach to enable scientists to easily create new custom endpoints
+      -
+        status: in progress
+        thing: Environmental Data Retrieval (EDR) and WWDB endpoint(s) for data discovery and querying
+      -
+        status: upcoming
+        thing: Custom endpoints for GDP replacement
+      -
+        status: upcoming
+        thing: Add additional custom endpoints as needed
+  - 
+    name: Cloud-Optimized Data Access 
+    things: 
+      -
+        status: done
+        thing: Publicly readable (requester pays) S3 bucket
+      -
+        status: in progress
+        thing: ETLs for data ingestion, storage, and maintenance
+      -
+        status: upcoming
+        thing: Cloud-optimized data access with a STAC catalog for discovery
+      -
+        status: upcoming
+        thing: Cloud-optimized GeoTiffs (COGs) made available
+      -
+        status: upcoming
+        thing: ZARR file formats made available 
+      -
+        status: upcoming
+        thing: Cloud infrastructure system monitoring (cost, system health, usage statistics) 
 
 reach_goals:
   - "Updated delivery of samples data (discrete water quality data)"
