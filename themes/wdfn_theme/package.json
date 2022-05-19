@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf static && mkdirp static",
     "build": "npm run clean && run-p build:* ",
-    "build:css": "mkdirp static && sass --load-path node_modules/wdfn-viz/src/stylesheets --load-path node_modules/@uswds/uswds/src/stylesheets --load-path node_modules/@uswds/uswds/packages src/styles/main.scss static/main.css && postcss static/main.css -o static/main.css",
+    "build:css": "mkdirp static && sass --load-path node_modules/wdfn-viz/dist/sass --load-path node_modules/@uswds/uswds/src/stylesheets --load-path node_modules/@uswds/uswds/packages src/styles/main.scss static/main.css && postcss static/main.css -o static/main.css",
     "build:fonts": "mkdirp static/fonts && cp src/fonts/* static/fonts && cp -r node_modules/wdfn-viz/dist/fonts/* static/fonts",
     "build:images": "mkdirp static/img && cp -r src/images/* static/img && cp -r node_modules/wdfn-viz/dist/img/* static/img",
     "build:js": "mkdirp static/scripts && rollup -c --environment NODE_ENV:production",
@@ -57,6 +57,6 @@
     "sass": "^1.51.0"
   },
   "dependencies": {
-    "wdfn-viz": "3.0.1"
+    "wdfn-viz": "3.2.0"
   }
 }
