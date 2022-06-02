@@ -1,4 +1,5 @@
 ---
+order: 5
 date: 2019-08-19
 slug: about-connector
 title: WDFN Tableau Data Connector

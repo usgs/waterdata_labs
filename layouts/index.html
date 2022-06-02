@@ -24,7 +24,7 @@
 
 
     <ul class="usa-card-group">
-      {{ range .RegularPages }}
+      {{ range .RegularPages.ByParam "order" }}
         <li class="tablet:grid-col-4 usa-card">
           <div class="usa-card__container">
             <header class="usa-card__header">
