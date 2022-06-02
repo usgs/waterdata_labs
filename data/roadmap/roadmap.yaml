@@ -158,7 +158,7 @@ categories:
         thing: Host gridded climate and land use datasets
       -
         status: in progress
-        thing: Determine optimal cloud storage/retrieval for THREDDS data
+        thing: Deploy GDP/THREDDS to production cloud and deprecate on-prem hosting
       -
         status: upcoming
         thing: Host more datasets as needed
@@ -211,8 +211,8 @@ categories:
         status: in progress
         thing: ETLs for data ingestion, storage, and maintenance
       -
-        status: upcoming
-        thing: Cloud-optimized data access with a STAC catalog for discovery
+        status: in progress
+        thing: Cloud infrastructure system monitoring (cost, system health, usage statistics)
       -
         status: upcoming
         thing: Cloud-optimized GeoTiffs (COGs) made available
@@ -221,7 +221,7 @@ categories:
         thing: ZARR file formats made available 
       -
         status: upcoming
-        thing: Cloud infrastructure system monitoring (cost, system health, usage statistics) 
+        thing: STAC catalog for discovery 
 
 reach_goals:
   - "Updated delivery of samples data (discrete water quality data)"
