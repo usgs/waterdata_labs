@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# 01-June-2022
+### Changed
+- Edited the roadmap yaml for GDP and CODA
+- Reordered the home page tiles by adding a order parameter and use the Hugo range ByParameter functionality
+
 # 15-May-2022
 ### Changed
 - Adjusted NHGF content in the roadmap.yaml
