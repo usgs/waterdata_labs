@@ -1,6 +1,6 @@
 ---
 date: 2022-05-10
-slug: https://labs.waterdata.usgs.gov/gdp_web/
+slug: https://cida.usgs.gov/gdp/how-to-gdp/ 
 title: Geo Data Portal (GDP) and THREDDS
 description: Geo Data Portal (GDP) combined with THREDDS data server provides a user-interface for subsetting and summarization access to numerous gridded climate and land use datasets.
 thumbnail_path: "./static/gdp/gdp.jpg"
